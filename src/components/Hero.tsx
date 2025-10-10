@@ -1,0 +1,54 @@
+import { ArrowRight } from "lucide-react";
+import Particles from "./Particles";
+import heroBg from "@/assets/hero-bg.jpg";
+
+const Hero = () => {
+  return (
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background gradient glow */}
+      <div 
+        className="absolute inset-0 opacity-40"
+        style={{ background: 'var(--gradient-hero)' }}
+      />
+      
+      {/* Hero image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center opacity-30"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      />
+      
+      {/* Animated particles */}
+      <Particles />
+      
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-6 text-center">
+        <h1 className="text-7xl md:text-8xl lg:text-9xl font-heading font-bold mb-6 animate-fade-in">
+          Build on <span className="glow-text">Cloud9</span>
+        </h1>
+        
+        <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 animate-fade-in" style={{ animationDelay: '0.2s', opacity: 0 }}>
+          Automation for the AI Age
+        </p>
+        
+        <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: '0.4s', opacity: 0 }}>
+          I design intelligent systems that save you time, nurture leads, and scale your business while you sleep.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-slow" style={{ animationDelay: '0.6s', opacity: 0 }}>
+          <button className="btn-hero group">
+            Start with an Audit
+            <ArrowRight className="inline-block ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+          </button>
+          <button className="btn-outline-hero">
+            See How It Works
+          </button>
+        </div>
+      </div>
+      
+      {/* Bottom gradient fade */}
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
+    </section>
+  );
+};
+
+export default Hero;
