@@ -7,7 +7,7 @@ const nodes = [
 
 const Ecosystem = () => {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="pt-24 pb-0 px-6 relative overflow-hidden">
       {/* Background effects */}
       <div 
         className="absolute inset-0 opacity-20"
