@@ -2,7 +2,7 @@ import { Calendar } from "lucide-react";
 
 const CTA = () => {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="py-12 md:py-24 px-6 relative">
       {/* Background gradient glow */}
       <div 
         className="absolute inset-0 opacity-40"
