@@ -47,7 +47,7 @@ const Ecosystem = () => {
           </div>
           
           {/* Top-left node */}
-          <div className="absolute top-[15%] left-[15%] z-10 animate-float">
+          <div className="absolute top-[5%] left-[5%] md:top-[15%] md:left-[15%] z-20 animate-float">
             <div className="glass-card px-6 py-3 border-secondary/40 hover:border-secondary/80 transition-all hover:scale-110">
               <span className="text-sm font-heading font-semibold text-secondary">Always Open AI</span>
             </div>
