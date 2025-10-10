@@ -9,7 +9,7 @@ const Header = () => {
             <img 
               src={logo} 
               alt="PixelCloud9 Logo" 
-              className="h-10 w-auto object-contain"
+              className="h-16 md:h-20 w-auto object-contain drop-shadow-[0_0_15px_rgba(124,58,237,0.5)]"
             />
           </div>
         </div>
