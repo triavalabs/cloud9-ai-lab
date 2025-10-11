@@ -1,6 +1,6 @@
 // src/components/Header.tsx
 import React from "react";
-import logo from "/assets/logo.svg"; // or "../assets/logo.svg" if inside src
+import logo from "@/assets/logo.svg";
 
 const Header: React.FC = () => {
   return (
