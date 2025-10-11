@@ -51,11 +51,11 @@ const Platforms = () => {
                 
                 {/* Logo Container */}
                 <div className="w-20 h-20 rounded-2xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
-                  <img 
-                    src={platform.logo} 
-                    alt={`${platform.name} logo`}
-                    className="w-full h-full object-contain"
-                  />
+                <img 
+                  src={platform.logo} 
+                  alt={`${platform.name} logo`}
+                  className={`w-full h-full object-contain ${platform.name === 'OpenAI' ? 'dark:brightness-0 dark:invert' : ''}`}
+                />
                 </div>
                 
                 {/* Platform Name */}
