@@ -1,89 +1,106 @@
-const nodes = [
-  { name: "PixelCloud9", position: "center", color: "primary" },
-  { name: "Always Open AI", position: "top-left", color: "secondary" },
-  { name: "Triava Labs", position: "top-right", color: "accent" },
-  { name: "WakeUp Alliance", position: "bottom", color: "primary" },
-];
+// src/components/Ecosystem.tsx
+import React from "react";
 
-const Ecosystem = () => {
+const GradientWord: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+  <span className="bg-gradient-to-br from-[#8B5CF6] to-[#00FFC8] bg-clip-text text-transparent">{children}</span>
+);
+
+export default function Ecosystem() {
   return (
-    <section className="pt-24 pb-0 px-6 relative overflow-hidden">
-      {/* Background effects */}
-      <div 
-        className="absolute inset-0 opacity-20"
-        style={{ background: 'var(--gradient-hero)' }}
-      />
-      
-      <div className="container mx-auto max-w-6xl relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-            Everything <span className="glow-text">Connects</span>
+    <section id="ecosystem" className="relative py-20">
+      <div className="mx-auto max-w-6xl px-6">
+        {/* Heading */}
+        <div className="text-center">
+          <p className="text-sm uppercase tracking-widest text-white/60">PixelCloud9</p>
+          <h2 className="mt-2 text-3xl sm:text-4xl font-semibold">
+            What We <GradientWord>Build</GradientWord> (So You Don’t Have To)
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            PixelCloud9 is the base layer behind other brands — Always Open AI, Triava Labs, WakeUp Alliance — built once, deployed everywhere.
+          <p className="mt-3 text-white/70 max-w-2xl mx-auto">
+            Three simple pieces that work together to book more clients and cut busywork.
           </p>
         </div>
-        
-        <div className="relative h-96 flex items-center justify-center">
-          {/* Connection lines */}
-          <svg className="absolute inset-0 w-full h-full" style={{ zIndex: 1 }}>
-            <defs>
-              <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" style={{ stopColor: 'hsl(258, 80%, 57%)', stopOpacity: 0.6 }} />
-                <stop offset="100%" style={{ stopColor: 'hsl(168, 100%, 60%)', stopOpacity: 0.6 }} />
-              </linearGradient>
-            </defs>
-            {/* Lines from center to each node */}
-            <line x1="50%" y1="50%" x2="25%" y2="25%" stroke="url(#lineGradient)" strokeWidth="2" />
-            <line x1="50%" y1="50%" x2="75%" y2="25%" stroke="url(#lineGradient)" strokeWidth="2" />
-            <line x1="50%" y1="50%" x2="50%" y2="80%" stroke="url(#lineGradient)" strokeWidth="2" />
-          </svg>
-          
-          {/* Center node */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
-            <div className="glass-card px-8 py-4 border-primary/60 shadow-[var(--shadow-glow)] animate-glow-pulse">
-              <span className="text-xl font-heading font-bold glow-text">PixelCloud9</span>
-            </div>
-          </div>
-          
-          {/* Top-left node */}
-          <div className="absolute top-[5%] left-[5%] md:top-[15%] md:left-[15%] z-20 animate-float">
-            <div className="glass-card px-6 py-3 border-secondary/40 hover:border-secondary/80 transition-all hover:scale-110">
-              <span className="text-sm font-heading font-semibold text-secondary">Always Open AI</span>
-            </div>
-          </div>
-          
-          {/* Top-right node */}
-          <div className="absolute top-[15%] right-[15%] z-10 animate-float" style={{ animationDelay: '2s' }}>
-            <div className="glass-card px-6 py-3 border-accent/40 hover:border-accent/80 transition-all hover:scale-110">
-              <span className="text-sm font-heading font-semibold text-accent">Triava Labs</span>
-            </div>
-          </div>
-          
-          {/* Bottom node */}
-          <div className="absolute bottom-[10%] left-1/2 -translate-x-1/2 z-10 animate-float" style={{ animationDelay: '4s' }}>
-            <div className="glass-card px-6 py-3 border-primary/40 hover:border-primary/80 transition-all hover:scale-110">
-              <span className="text-sm font-heading font-semibold text-primary">WakeUp Alliance</span>
-            </div>
-          </div>
-          
-          {/* Ambient particles */}
-          {[...Array(8)].map((_, i) => (
+
+        {/* 3 Pillars */}
+        <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Websites That Book Clients */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 hover:border-white/20 transition">
             <div
-              key={i}
-              className="absolute w-2 h-2 rounded-full bg-primary/40 blur-sm animate-particle"
-              style={{
-                left: `${20 + Math.random() * 60}%`,
-                top: `${20 + Math.random() * 60}%`,
-                animationDelay: `${Math.random() * 5}s`,
-                animationDuration: `${8 + Math.random() * 4}s`,
-              }}
+              className="h-10 w-10 rounded-xl mx-auto
+                            bg-gradient-to-br from-[#8B5CF6] to-[#00FFC8] opacity-90"
             />
-          ))}
+            <h3 className="mt-4 text-lg font-semibold text-center">Websites That Book Clients</h3>
+            <p className="mt-2 text-sm text-white/70">Turn visitors into scheduled calls with a booking-first site.</p>
+            <ul className="mt-4 space-y-1 text-sm text-white/70">
+              <li>• Booking page + reminders</li>
+              <li>• No-show recovery</li>
+              <li>• Built for speed + SEO basics</li>
+            </ul>
+            <div className="mt-4 text-xs text-white/60">
+              Typical <span className="font-medium">+20–40%</span> more bookings
+            </div>
+          </div>
+
+          {/* AI Assistants That Handle Support */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 hover:border-white/20 transition">
+            <div
+              className="h-10 w-10 rounded-xl mx-auto
+                            bg-gradient-to-br from-[#8B5CF6] to-[#00FFC8] opacity-90"
+            />
+            <h3 className="mt-4 text-lg font-semibold text-center">AI Assistants That Handle Support</h3>
+            <p className="mt-2 text-sm text-white/70">Instant answers, lead capture, and human handoff when needed.</p>
+            <ul className="mt-4 space-y-1 text-sm text-white/70">
+              <li>• 24/7 chat + knowledge base</li>
+              <li>• Lead capture + qualification</li>
+              <li>• Routes complex issues to your team</li>
+            </ul>
+            <div className="mt-4 text-xs text-white/60">
+              <span className="font-medium">40–60%</span> fewer tickets
+            </div>
+          </div>
+
+          {/* Systems That Run Your Business */}
+          <div className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur p-6 hover:border-white/20 transition">
+            <div
+              className="h-10 w-10 rounded-xl mx-auto
+                            bg-gradient-to-br from-[#8B5CF6] to-[#00FFC8] opacity-90"
+            />
+            <h3 className="mt-4 text-lg font-semibold text-center">Systems That Run Your Business</h3>
+            <p className="mt-2 text-sm text-white/70">Follow-ups, reactivations, and reviews—on autopilot.</p>
+            <ul className="mt-4 space-y-1 text-sm text-white/70">
+              <li>• Pipelines + nurture sequences</li>
+              <li>• Reactivation + rebook loops</li>
+              <li>• Review engine with drip logic</li>
+            </ul>
+            <div className="mt-4 text-xs text-white/60">
+              First wins in about <span className="font-medium">30 days</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Connector sentence */}
+        <div className="mt-10 text-center text-white/70">
+          Everything shares the same data—leads move from{" "}
+          <span className="font-medium">site → assistant → automations</span> without slipping through the cracks.
+        </div>
+
+        {/* Optional CTA row */}
+        <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="/book"
+            className="inline-flex items-center justify-center rounded-xl px-4 py-2
+                       bg-gradient-to-br from-[#8B5CF6] to-[#00FFC8] text-black font-medium"
+          >
+            Start with an Audit
+          </a>
+          <a
+            href="#process"
+            className="inline-flex items-center justify-center rounded-xl px-4 py-2
+                       border border-white/15 hover:border-white/25 transition"
+          >
+            See How It Works
+          </a>
         </div>
       </div>
     </section>
   );
-};
-
-export default Ecosystem;
+}
