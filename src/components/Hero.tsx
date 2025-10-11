@@ -23,7 +23,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-6 animate-fade-in">
-          AI Systems That Save You Time and Win You Clients
+          AI Systems That <span className="glow-text">Save You Time</span> and Win You Clients
         </h1>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s', opacity: 0 }}>
