@@ -15,15 +15,15 @@ const CTA = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 animate-pulse" />
           
           <div className="relative z-10">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
+            <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
               Let's Map Out Your <span className="glow-text">Automation Opportunities</span>
             </h2>
             
-            <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
+            <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               No sales pitch, just a 30-minute strategy call to find your automation quick wins.
             </p>
             
-            <button className="btn-hero group text-lg">
+            <button className="btn-hero group text-base md:text-lg">
               <Calendar className="inline-block mr-2 w-5 h-5" />
               Book Your Strategy Call
             </button>
