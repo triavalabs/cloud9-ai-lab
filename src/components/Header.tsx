@@ -6,7 +6,7 @@ const Header = () => {
       <div className="container mx-auto max-w-7xl">
         <div className="flex justify-center items-center">
           <div className="glass-card px-6 py-3 border-primary/30 hover:border-primary/60 transition-all">
-            <img src="/path/to/logo.svg" alt="PixelCloud9 Logo" class="w-[120px] sm:w-[140px] lg:w-[160px] h-auto" />
+            <img src={logo} alt="PixelCloud9 Logo" className="w-[120px] sm:w-[140px] lg:w-[160px] h-auto" />
           </div>
         </div>
       </div>
