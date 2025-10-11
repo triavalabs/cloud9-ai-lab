@@ -15,21 +15,21 @@ const Problem = () => {
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-              <MessageCircle className="w-8 h-8 text-accent-foreground" />
+              <MessageCircle className="w-8 h-8 text-accent" />
             </div>
             <p className="text-muted-foreground">Too many missed messages</p>
           </div>
           
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-              <Clock className="w-8 h-8 text-accent-foreground" />
+              <Clock className="w-8 h-8 text-accent" />
             </div>
             <p className="text-muted-foreground">No time for follow-ups</p>
           </div>
           
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mb-4">
-              <Users className="w-8 h-8 text-accent-foreground" />
+              <Users className="w-8 h-8 text-accent" />
             </div>
             <p className="text-muted-foreground">Lost leads slipping away</p>
           </div>
