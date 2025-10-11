@@ -1,8 +1,6 @@
 // src/components/Header.tsx
 import React from "react";
-// If your SVG is in /public/assets, use the absolute path:
-const logo = "/assets/logo.svg";
-// If it's in src/assets, instead do: import logo from "../assets/logo.svg";
+import logo from "@/assets/logo.svg";
 
 const Header: React.FC = () => {
   return (
