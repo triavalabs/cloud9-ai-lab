@@ -20,7 +20,7 @@ const Ecosystem = () => {
             Everything <span className="glow-text">Connects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            PixelCloud9 is the base layer behind other projects — build once, deploy everywhere.
+            PixelCloud9 is the base layer behind other brands — Always Open AI, Triava Labs, WakeUp Alliance — built once, deployed everywhere.
           </p>
         </div>
         

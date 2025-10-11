@@ -1,7 +1,8 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
-import FounderStory from "@/components/FounderStory";
-import Features from "@/components/Features";
+import Problem from "@/components/Problem";
+import Services from "@/components/Services";
+import Results from "@/components/Results";
 import Process from "@/components/Process";
 import Ecosystem from "@/components/Ecosystem";
 import CTA from "@/components/CTA";
@@ -12,8 +13,9 @@ const Index = () => {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <FounderStory />
-      <Features />
+      <Problem />
+      <Services />
+      <Results />
       <Process />
       <Ecosystem />
       <CTA />

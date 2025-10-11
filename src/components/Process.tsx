@@ -3,23 +3,23 @@ import { Search, FileText, Wrench, Rocket } from "lucide-react";
 const steps = [
   {
     icon: Search,
-    title: "Discovery & Audit",
-    description: "We map your current systems and identify opportunities for automation.",
+    title: "Discovery Call",
+    description: "We learn your workflow and bottlenecks.",
   },
   {
     icon: FileText,
     title: "Blueprint",
-    description: "Custom strategy designed specifically for your business goals and workflows.",
+    description: "A simple plan tailored to your business.",
   },
   {
     icon: Wrench,
     title: "System Build",
-    description: "I build and configure your automation systems with precision and care.",
+    description: "We connect and automate everything.",
   },
   {
     icon: Rocket,
-    title: "Launch & Training",
-    description: "Go live with full support and training to ensure smooth adoption.",
+    title: "Training",
+    description: "You'll know exactly how to use it — we've got your back.",
   },
 ];
 

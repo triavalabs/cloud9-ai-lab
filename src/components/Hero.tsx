@@ -22,16 +22,12 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="text-7xl md:text-8xl lg:text-9xl font-heading font-bold mb-6 animate-fade-in">
-          Build on <span className="glow-text">Cloud9</span>
+        <h1 className="text-5xl md:text-6xl lg:text-7xl font-heading font-bold mb-6 animate-fade-in">
+          AI Systems That Save You Time and Win You Clients
         </h1>
         
-        <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground mb-4 animate-fade-in" style={{ animationDelay: '0.2s', opacity: 0 }}>
-          Automation for the AI Age
-        </p>
-        
-        <p className="text-base md:text-lg lg:text-xl text-muted-foreground max-w-3xl mx-auto mb-12 animate-fade-in" style={{ animationDelay: '0.4s', opacity: 0 }}>
-          I design intelligent systems that save you time, nurture leads, and scale your business while you sleep.
+        <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s', opacity: 0 }}>
+          We help you automate booking, follow-ups, and customer messages — so you can focus on what you do best.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-slow" style={{ animationDelay: '0.6s', opacity: 0 }}>

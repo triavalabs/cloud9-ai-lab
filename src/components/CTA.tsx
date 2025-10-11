@@ -16,20 +16,20 @@ const CTA = () => {
           
           <div className="relative z-10">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold mb-6">
-              Build on <span className="glow-text">Cloud9</span>
+              Let's Map Out Your <span className="glow-text">Automation Opportunities</span>
             </h2>
             
             <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-2xl mx-auto">
-              Let's map your first automation and reclaim your time. Book a free audit and discover what's possible.
+              No sales pitch, just a 30-minute strategy call to find your automation quick wins.
             </p>
             
             <button className="btn-hero group text-lg">
               <Calendar className="inline-block mr-2 w-5 h-5" />
-              Book a Free Audit
+              Book Your Strategy Call
             </button>
             
             <p className="text-sm text-muted-foreground mt-8">
-              No commitment required • 30-minute session
+              Free consultation • No commitment required
             </p>
           </div>
         </div>
