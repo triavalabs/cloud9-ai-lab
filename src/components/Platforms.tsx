@@ -1,14 +1,21 @@
-import { Workflow, Zap, Cog, Brain, MessageSquare, Mail, CreditCard, Calendar } from "lucide-react";
+import gohighlevelLogo from "@/assets/logos/gohighlevel.png";
+import zapierLogo from "@/assets/logos/zapier.svg";
+import makeLogo from "@/assets/logos/make.png";
+import openaiLogo from "@/assets/logos/openai.svg";
+import twilioLogo from "@/assets/logos/twilio.svg";
+import gmailLogo from "@/assets/logos/gmail.png";
+import stripeLogo from "@/assets/logos/stripe.svg";
+import calendlyLogo from "@/assets/logos/calendly.png";
 
 const platforms = [
-  { name: "GoHighLevel", icon: Workflow, color: "from-green-500 to-emerald-400" },
-  { name: "Zapier", icon: Zap, color: "from-orange-500 to-amber-400" },
-  { name: "Make", icon: Cog, color: "from-purple-500 to-pink-400" },
-  { name: "OpenAI", icon: Brain, color: "from-primary to-secondary" },
-  { name: "Twilio", icon: MessageSquare, color: "from-red-500 to-pink-500" },
-  { name: "Gmail", icon: Mail, color: "from-blue-500 to-cyan-400" },
-  { name: "Stripe", icon: CreditCard, color: "from-indigo-500 to-purple-500" },
-  { name: "Calendly", icon: Calendar, color: "from-blue-600 to-blue-400" }
+  { name: "GoHighLevel", logo: gohighlevelLogo, color: "from-green-500 to-emerald-400" },
+  { name: "Zapier", logo: zapierLogo, color: "from-orange-500 to-amber-400" },
+  { name: "Make", logo: makeLogo, color: "from-purple-500 to-pink-400" },
+  { name: "OpenAI", logo: openaiLogo, color: "from-primary to-secondary" },
+  { name: "Twilio", logo: twilioLogo, color: "from-red-500 to-pink-500" },
+  { name: "Gmail", logo: gmailLogo, color: "from-blue-500 to-cyan-400" },
+  { name: "Stripe", logo: stripeLogo, color: "from-indigo-500 to-purple-500" },
+  { name: "Calendly", logo: calendlyLogo, color: "from-blue-600 to-blue-400" }
 ];
 
 const Platforms = () => {
@@ -33,7 +40,6 @@ const Platforms = () => {
         {/* Platforms Grid */}
         <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
           {platforms.map((platform, index) => {
-            const Icon = platform.icon;
             return (
               <div
                 key={platform.name}
@@ -41,11 +47,15 @@ const Platforms = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Glow effect on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 
-                {/* Icon Container */}
-                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${platform.color} flex items-center justify-center relative z-10 shadow-lg`}>
-                  <Icon className="w-10 h-10 text-white" />
+                {/* Logo Container */}
+                <div className="w-20 h-20 rounded-2xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
+                  <img 
+                    src={platform.logo} 
+                    alt={`${platform.name} logo`}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 
                 {/* Platform Name */}
