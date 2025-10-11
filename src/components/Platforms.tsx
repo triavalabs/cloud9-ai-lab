@@ -50,11 +50,11 @@ const Platforms = () => {
                 <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
                 
                 {/* Logo Container */}
-                <div className="w-20 h-20 rounded-2xl bg-card border border-border flex items-center justify-center relative z-10 p-3 shadow-sm">
+                <div className="w-20 h-20 rounded-2xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
                   <img 
                     src={platform.logo} 
                     alt={`${platform.name} logo`}
-                    className="w-full h-full object-contain dark:brightness-0 dark:invert"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 
