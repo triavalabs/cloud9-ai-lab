@@ -57,11 +57,6 @@ const Platforms = () => {
                   className={`w-full h-full object-contain ${platform.name === 'OpenAI' ? 'dark:brightness-0 dark:invert' : ''}`}
                 />
                 </div>
-                
-                {/* Platform Name */}
-                <h3 className="text-base md:text-lg font-semibold text-foreground relative z-10">
-                  {platform.name}
-                </h3>
               </div>
             );
           })}
