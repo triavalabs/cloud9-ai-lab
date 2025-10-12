@@ -1,8 +1,6 @@
 import { MessageCircle, Clock, Users } from "lucide-react";
-
 const Problem = () => {
-  return (
-    <section className="pb-24 px-6 bg-muted/30">
+  return <section className="pb-24 px-6 bg-muted/30">
       <div className="container mx-auto max-w-5xl text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
           You're Growing — But It's Getting <span className="glow-text">Messy</span>
@@ -36,15 +34,13 @@ const Problem = () => {
         </div>
         
         <div className="mt-16 max-w-2xl mx-auto">
-          <p className="text-lg md:text-xl text-muted-foreground">
+          <p className="md:text-xl text-orange-400 text-left font-extrabold text-xl">
             <span className="text-foreground font-semibold">Before PixelCloud9:</span> chaos and missed leads.
             <br />
             <span className="text-foreground font-semibold">After:</span> clients booked, messages handled, business running smooth.
           </p>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Problem;
