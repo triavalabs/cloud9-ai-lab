@@ -34,6 +34,14 @@ const Problem = () => {
             <p className="text-muted-foreground">Lost leads slipping away</p>
           </div>
         </div>
+        
+        <div className="mt-16 max-w-2xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground">
+            <span className="text-foreground font-semibold">Before PixelCloud9:</span> chaos and missed leads.
+            <br />
+            <span className="text-foreground font-semibold">After:</span> clients booked, messages handled, business running smooth.
+          </p>
+        </div>
       </div>
     </section>
   );
