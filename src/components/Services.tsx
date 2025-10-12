@@ -3,7 +3,7 @@ import { Globe, Bot, Workflow, ArrowRight, Check } from "lucide-react";
 const services = [
   {
     icon: Globe,
-    title: "Websites That Book Clients",
+    title: "Websites & Funnels That Book Clients",
     outcome: "Turn visitors into scheduled calls with a booking-first site.",
     features: [
       "Booking page + reminders",
