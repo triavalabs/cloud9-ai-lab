@@ -25,7 +25,7 @@ const Hero = () => {
         <p style={{
         animationDelay: '0.1s',
         opacity: 0
-      }} className="text-lg mb-6 max-w-2xl mx-auto animate-fade-in md:text-xl text-blue-600">
+      }} className="text-lg mb-6 max-w-2xl mx-auto animate-fade-in text-blue-600 md:text-2xl">
           Built for service-based businesses who want to grow without adding more chaos.
         </p>
         
