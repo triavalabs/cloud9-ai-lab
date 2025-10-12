@@ -19,7 +19,7 @@ const steps = [
   {
     icon: Rocket,
     title: "Training",
-    description: "You'll know exactly how to use it — we've got your back.",
+    description: "You'll always have a real person to reach out to — we don't leave you talking to a bot.",
   },
 ];
 
