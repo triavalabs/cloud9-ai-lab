@@ -20,7 +20,7 @@ const platforms = [
 
 const Platforms = () => {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="pb-24 px-6 relative overflow-hidden">
       <div className="absolute inset-0 bg-gradient-to-b from-background via-background/50 to-background" />
       
       <div className="container mx-auto max-w-7xl relative z-10">
