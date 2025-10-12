@@ -25,7 +25,7 @@ const steps = [
 
 const Process = () => {
   return (
-    <section className="py-24 px-6 relative">
+    <section className="pb-24 px-6 relative">
       {/* Background gradient */}
       <div 
         className="absolute inset-0 opacity-30"
