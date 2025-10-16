@@ -68,7 +68,7 @@ const Process = () => {
                 <div className="glass-card flex-1 p-6 md:p-8 group hover:border-primary/40 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-sm font-semibold text-secondary">Step {index + 1}</span>
-                    <span className="text-sm text-muted-foreground">— {step.timeline}</span>
+                    <span className="text-sm text-primary">— {step.timeline}</span>
                   </div>
                   <h3 className="text-2xl font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
                     {step.title}
