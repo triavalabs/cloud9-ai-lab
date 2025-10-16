@@ -1,11 +1,6 @@
 import { MessageCircle, Clock, Users } from "lucide-react";
-
-interface ProblemProps {
-  className?: string;
-}
-
-const Problem = ({ className = "" }: ProblemProps) => {
-  return <section className={`pb-24 px-6 bg-muted/30 ${className}`}>
+const Problem = () => {
+  return <section className="pb-24 px-6 bg-muted/30">
       <div className="container mx-auto max-w-5xl text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
           You're Growing — But It's Getting <span className="glow-text">Messy</span>
@@ -39,19 +34,12 @@ const Problem = ({ className = "" }: ProblemProps) => {
         </div>
         
         <div className="mt-16 max-w-2xl mx-auto">
-          <div className="glass-card p-8 space-y-6">
-            <div className="space-y-2">
-              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Before PixelCloud9</p>
-              <p className="text-lg md:text-xl text-destructive font-medium">Chaos, missed leads, and overwhelm.</p>
-            </div>
-            
-            <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-            
-            <div className="space-y-2">
-              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">After PixelCloud9</p>
-              <p className="text-lg md:text-xl glow-text font-semibold">Clients booked, messages handled, business running smooth.</p>
-            </div>
-          </div>
+          <p className="md:text-xl font-extrabold text-xl text-left text-teal-300 py-[20px]">
+            <span className="text-foreground font-semibold text-left">Before PixelCloud9:</span> chaos and missed leads.
+            <br />
+            <span className="text-foreground font-semibold">
+After:</span> clients booked, messages handled, business running smooth.
+          </p>
         </div>
       </div>
     </section>;
