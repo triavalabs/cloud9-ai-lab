@@ -4,21 +4,25 @@ const steps = [
   {
     icon: Search,
     title: "Discovery Call",
+    timeline: "30 min",
     description: "We learn your workflow and bottlenecks.",
   },
   {
     icon: FileText,
     title: "Blueprint",
-    description: "A simple plan tailored to your business.",
+    timeline: "2 days",
+    description: "A tailored plan that fixes what's costing you time.",
   },
   {
     icon: Wrench,
     title: "System Build",
+    timeline: "1 week",
     description: "We connect and automate everything.",
   },
   {
     icon: Rocket,
     title: "Training",
+    timeline: "Day 10",
     description: "You'll always have a real person to reach out to — we don't leave you talking to a bot.",
   },
 ];
@@ -64,6 +68,7 @@ const Process = () => {
                 <div className="glass-card flex-1 p-6 md:p-8 group hover:border-primary/40 transition-all duration-300">
                   <div className="flex items-center gap-3 mb-3">
                     <span className="text-sm font-semibold text-secondary">Step {index + 1}</span>
+                    <span className="text-sm text-muted-foreground">— {step.timeline}</span>
                   </div>
                   <h3 className="text-2xl font-heading font-semibold mb-2 group-hover:text-primary transition-colors">
                     {step.title}
