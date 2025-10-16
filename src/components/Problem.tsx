@@ -15,6 +15,10 @@ const Problem = ({ className = "" }: ProblemProps) => {
           Calls, messages, follow-ups — it's too much to juggle. We design systems that run your communication while you focus on growth.
         </p>
         
+        <p className="text-lg md:text-xl font-medium text-muted-foreground mb-6 italic">
+          Sound familiar?
+        </p>
+        
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <div className="flex flex-col items-center">
             <div className="w-16 h-16 rounded-full bg-accent/10 border border-accent/30 flex items-center justify-center mb-4">
@@ -38,18 +42,28 @@ const Problem = ({ className = "" }: ProblemProps) => {
           </div>
         </div>
         
-        <div className="mt-16 max-w-2xl mx-auto">
-          <div className="glass-card p-8 space-y-6">
-            <div className="space-y-2">
-              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">Before PixelCloud9</p>
-              <p className="text-lg md:text-xl text-destructive font-medium">Chaos, missed leads, and overwhelm.</p>
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-4 md:gap-6">
+            {/* Before Section */}
+            <div className="glass-card p-6 md:p-8 bg-destructive/5 border-destructive/20">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-3xl">😓</span>
+                <p className="text-base font-bold text-destructive uppercase tracking-wide">Before PixelCloud9</p>
+              </div>
+              <p className="text-lg md:text-xl text-foreground/90 font-medium leading-relaxed">
+                Missed messages, lost leads, endless follow-ups.
+              </p>
             </div>
             
-            <div className="h-px bg-gradient-to-r from-transparent via-border to-transparent" />
-            
-            <div className="space-y-2">
-              <p className="text-sm font-semibold text-muted-foreground uppercase tracking-wide">After PixelCloud9</p>
-              <p className="text-lg md:text-xl glow-text font-semibold">Clients booked, messages handled, business running smooth.</p>
+            {/* After Section */}
+            <div className="glass-card p-6 md:p-8 bg-primary/5 border-primary/20">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-3xl">✨</span>
+                <p className="text-base font-bold text-primary uppercase tracking-wide">After PixelCloud9</p>
+              </div>
+              <p className="text-lg md:text-xl glow-text font-semibold leading-relaxed mb-3">
+                Booked clients, instant replies, 60% fewer support tickets.
+              </p>
             </div>
           </div>
         </div>
