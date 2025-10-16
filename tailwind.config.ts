@@ -90,6 +90,7 @@ export default {
         "fade-in-slow": "fade-in-slow 1.2s ease-out forwards",
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
         "scroll": "scroll 25s linear infinite",
+        "scroll-mobile": "scroll 15s linear infinite",
       },
     },
   },

@@ -54,7 +54,7 @@ const Platforms = () => {
         </div>
 
         <div className="relative overflow-hidden mb-12">
-          <div className="flex gap-8 md:gap-12 animate-scroll hover:pause [&>*]:shrink-0">
+          <div className="flex gap-8 md:gap-12 animate-scroll-mobile md:animate-scroll hover:pause [&>*]:shrink-0">
             {/* First set of logos */}
             {platforms.map((platform) => (
               <div 
