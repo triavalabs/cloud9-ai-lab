@@ -20,7 +20,7 @@ const CTA = () => {
             </h2>
             
             <p className="text-base md:text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
-              No sales pitch, just a 30-minute strategy call to find your automation quick wins.
+              Free 30-min strategy call. No pressure — just clear next steps to save 10+ hours a week.
             </p>
             
             <button className="btn-hero group text-base md:text-lg">
