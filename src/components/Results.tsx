@@ -2,7 +2,7 @@ import { TrendingUp, Clock, Users } from "lucide-react";
 
 const Results = () => {
   return (
-    <section className="py-24 px-6 relative overflow-hidden">
+    <section className="pb-24 px-6 relative overflow-hidden">
       {/* Background gradient */}
       <div 
         className="absolute inset-0 opacity-20"
