@@ -18,25 +18,29 @@ const Hero = () => {
       
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 animate-fade-in">
+        <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20 animate-fade-in">
+          <span className="text-sm md:text-base font-medium text-primary">💡 Save 10+ hours per week in month one!</span>
+        </div>
+        
+        <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 animate-fade-in" style={{ animationDelay: '0.1s', opacity: 0 }}>
           AI Systems That <span className="glow-text">Save You Time</span> and Win You Clients
         </h1>
         
         <p style={{
-        animationDelay: '0.1s',
+        animationDelay: '0.2s',
         opacity: 0
       }} className="text-lg mb-6 max-w-2xl mx-auto animate-fade-in text-zinc-50 md:text-xl">
           Built for service-based businesses who want to grow without adding more chaos.
         </p>
         
         <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto animate-fade-in" style={{
-        animationDelay: '0.2s',
+        animationDelay: '0.3s',
         opacity: 0
-      }}>We automate booking, follow-ups, and customer messages —  
+      }}>We automate booking, follow-ups, and customer messages —  
 so you can focus on what you do best.</p>
         
         <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in-slow" style={{
-        animationDelay: '0.6s',
+        animationDelay: '0.4s',
         opacity: 0
       }}>
           <button className="btn-hero group">
