@@ -52,7 +52,7 @@ const Problem = ({ className = "" }: ProblemProps) => {
             <div className="glass-card p-6 md:p-8 bg-destructive/5 border-destructive/20">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">😓</span>
-                <p className="text-base font-bold text-destructive uppercase tracking-wide">Before PixelCloud9</p>
+                <p className="text-base font-bold text-destructive uppercase tracking-tight md:tracking-wide">Before PixelCloud9</p>
               </div>
               <p className="text-lg md:text-xl text-foreground/90 font-medium leading-relaxed">
                 Missed messages, lost leads, endless follow-ups.
@@ -63,7 +63,7 @@ const Problem = ({ className = "" }: ProblemProps) => {
             <div className="glass-card p-6 md:p-8 bg-primary/5 border-primary/20">
               <div className="flex items-center gap-3 mb-4">
                 <span className="text-3xl">✨</span>
-                <p className="text-base font-bold text-primary uppercase tracking-wide">After PixelCloud9</p>
+                <p className="text-base font-bold text-primary uppercase tracking-tight md:tracking-wide">After PixelCloud9</p>
               </div>
               <p className="text-lg md:text-xl glow-text font-semibold leading-relaxed mb-3">
                 Booked clients, instant replies, 60% fewer support tickets.
