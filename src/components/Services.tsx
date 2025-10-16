@@ -95,8 +95,8 @@ const Services = () => {
         {/* Flow description */}
         <div className="mt-12 text-center">
           <div className="glass-card p-6 max-w-3xl mx-auto">
-            <p className="text-sm md:text-base text-muted-foreground">
-              Everything shares the same data—leads move from <span className="font-semibold text-foreground">site → assistant → automations</span> without slipping through the cracks.
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              Everything shares the same data—leads move from <span className="font-semibold glow-text">site → assistant → automations</span> without slipping through the cracks.
             </p>
           </div>
         </div>
