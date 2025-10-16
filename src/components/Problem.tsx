@@ -34,10 +34,11 @@ const Problem = () => {
         </div>
         
         <div className="mt-16 max-w-2xl mx-auto">
-          <p className="md:text-xl text-orange-400 text-left font-extrabold text-xl">
-            <span className="text-foreground font-semibold">Before PixelCloud9:</span> chaos and missed leads.
+          <p className="md:text-xl text-orange-400 font-extrabold text-xl text-left">
+            <span className="text-foreground font-semibold text-left">Before PixelCloud9:</span> chaos and missed leads.
             <br />
-            <span className="text-foreground font-semibold">After:</span> clients booked, messages handled, business running smooth.
+            <span className="text-foreground font-semibold">
+After:</span> clients booked, messages handled, business running smooth.
           </p>
         </div>
       </div>
