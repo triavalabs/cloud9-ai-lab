@@ -4,35 +4,33 @@ const services = [
   {
     icon: Globe,
     title: "Websites & Funnels That Book Clients",
-    outcome: "Turn visitors into scheduled calls with a booking-first site.",
+    outcome: "Convert visitors into booked calls—fast.",
     features: [
-      "Booking page + reminders",
-      "No-show recovery",
-      "Built for speed + SEO basics"
+      "Smart booking pages + reminders",
+      "Built-in SEO foundation",
+      "No-show recovery automation"
     ],
-    proof: "Typical +20–40% more bookings"
+    proof: "→ 20–40% more bookings typical"
   },
   {
     icon: Bot,
     title: "AI Assistants That Handle Support",
-    outcome: "Instant answers and lead capture.",
+    outcome: "Capture leads and resolve routine questions instantly.",
     features: [
-      "24/7 chat + knowledge base",
-      "Lead capture + qualification",
-      "Routes complex issues to your team"
+      "24/7 chat trained on your business",
+      "Qualifies leads + routes complex issues"
     ],
-    proof: "40–60% fewer tickets"
+    proof: "→ 40–60% fewer tickets"
   },
   {
     icon: Workflow,
     title: "Systems That Run Your Business",
-    outcome: "Follow-ups, reactivations, and reviews—on autopilot.",
+    outcome: "Reactivations, reviews, and follow-ups on autopilot.",
     features: [
-      "Pipelines + nurture sequences",
-      "Reactivation + rebook loops",
+      "Smart nurture + rebook loops",
       "Review engine with drip logic"
     ],
-    proof: "First wins in about 30 days"
+    proof: "→ First wins in 30 days"
   },
 ];
 
