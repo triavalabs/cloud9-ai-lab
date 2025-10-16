@@ -19,7 +19,7 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="inline-flex items-center gap-2 px-4 py-2 mb-6 rounded-full bg-primary/10 border border-primary/20 animate-fade-in">
-          <span className="text-sm md:text-base font-medium text-primary">💡 Save 10+ hours per week in month one!</span>
+          <span className="text-sm md:text-base font-medium text-primary dark:text-cyan-400">💡 Save 10+ hours per week in month one!</span>
         </div>
         
         <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold mb-4 animate-fade-in" style={{ animationDelay: '0.1s', opacity: 0 }}>
