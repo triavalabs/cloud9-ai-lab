@@ -15,9 +15,13 @@ const Problem = ({ className = "" }: ProblemProps) => {
           Calls, messages, follow-ups — it's too much to juggle. We design systems that run your communication while you focus on growth.
         </p>
         
-        <p className="text-lg md:text-xl font-medium text-muted-foreground mb-6 italic">
-          Sound familiar?
-        </p>
+        <div className="inline-flex items-center mb-6">
+          <div className="glass-card px-6 py-3 rounded-full">
+            <p className="text-lg md:text-xl font-medium text-primary dark:text-cyan-400 italic">
+              Sound familiar?
+            </p>
+          </div>
+        </div>
         
         <div className="grid md:grid-cols-3 gap-8 mt-16">
           <div className="flex flex-col items-center">
