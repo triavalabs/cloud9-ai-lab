@@ -7,21 +7,17 @@ import Results from "@/components/Results";
 import Process from "@/components/Process";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
-
 const Index = () => {
-  return (
-    <main className="min-h-screen">
+  return <main className="min-h-screen">
       <Header />
       <Hero />
-      <Problem />
+      <Problem className="py-0" />
       <Services />
       <Platforms />
       <Results />
       <Process />
       <CTA />
       <Footer />
-    </main>
-  );
+    </main>;
 };
-
 export default Index;

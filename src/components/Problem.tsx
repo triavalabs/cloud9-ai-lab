@@ -34,7 +34,7 @@ const Problem = () => {
         </div>
         
         <div className="mt-16 max-w-2xl mx-auto">
-          <p className="md:text-xl text-orange-400 font-extrabold text-xl text-left">
+          <p className="md:text-xl font-extrabold text-xl text-left text-teal-300 py-[20px]">
             <span className="text-foreground font-semibold text-left">Before PixelCloud9:</span> chaos and missed leads.
             <br />
             <span className="text-foreground font-semibold">
