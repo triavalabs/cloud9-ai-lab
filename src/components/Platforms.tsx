@@ -53,28 +53,47 @@ const Platforms = () => {
           </h2>
         </div>
 
-        <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12">
-          {platforms.map((platform, index) => (
-            <div 
-              key={platform.name} 
-              className="group relative transition-transform duration-300 hover:scale-110"
-              style={{
-                animationDelay: `${index * 0.1}s`
-              }}
-            >
-              {/* Glow effect on hover */}
-              <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`} />
-              
-              {/* Logo Container */}
-              <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
-                <img 
-                  src={platform.logo} 
-                  alt={`${platform.name} logo`} 
-                  className={`w-full h-full object-contain ${platform.name === 'OpenAI' ? 'dark:brightness-0 dark:invert' : ''}`} 
-                />
+        <div className="relative overflow-hidden mb-12">
+          <div className="flex gap-8 md:gap-12 animate-scroll hover:pause [&>*]:shrink-0">
+            {/* First set of logos */}
+            {platforms.map((platform) => (
+              <div 
+                key={platform.name} 
+                className="group relative transition-transform duration-300 hover:scale-110"
+              >
+                {/* Glow effect on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`} />
+                
+                {/* Logo Container */}
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
+                  <img 
+                    src={platform.logo} 
+                    alt={`${platform.name} logo`} 
+                    className={`w-full h-full object-contain ${platform.name === 'OpenAI' ? 'dark:brightness-0 dark:invert' : ''}`} 
+                  />
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+            {/* Duplicate set for seamless loop */}
+            {platforms.map((platform) => (
+              <div 
+                key={`${platform.name}-duplicate`} 
+                className="group relative transition-transform duration-300 hover:scale-110"
+              >
+                {/* Glow effect on hover */}
+                <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`} />
+                
+                {/* Logo Container */}
+                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
+                  <img 
+                    src={platform.logo} 
+                    alt={`${platform.name} logo`} 
+                    className={`w-full h-full object-contain ${platform.name === 'OpenAI' ? 'dark:brightness-0 dark:invert' : ''}`} 
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         <div className="text-center">
