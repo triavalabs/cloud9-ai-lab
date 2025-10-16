@@ -54,12 +54,12 @@ const Platforms = () => {
         </div>
 
         <div className="relative overflow-hidden mb-12">
-          <div className="flex gap-8 md:gap-12 animate-scroll-mobile md:animate-scroll hover:pause [&>*]:shrink-0">
+          <div className="flex gap-8 md:gap-12 animate-scroll-mobile md:animate-scroll hover:pause will-change-transform">
             {/* First set of logos */}
             {platforms.map((platform) => (
               <div 
                 key={platform.name} 
-                className="group relative transition-transform duration-300 hover:scale-110"
+                className="group relative transition-transform duration-300 hover:scale-110 shrink-0"
               >
                 {/* Glow effect on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`} />
@@ -78,7 +78,7 @@ const Platforms = () => {
             {platforms.map((platform) => (
               <div 
                 key={`${platform.name}-duplicate`} 
-                className="group relative transition-transform duration-300 hover:scale-110"
+                className="group relative transition-transform duration-300 hover:scale-110 shrink-0"
               >
                 {/* Glow effect on hover */}
                 <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`} />
