@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import aiAutomationNodes from "@/assets/ai-automation-nodes.png";
 
 const AboutUs = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -49,13 +50,14 @@ const AboutUs = () => {
             </p>
           </div>
 
-          {/* Right: Gradient Animation */}
+          {/* Right: AI Automation Graphic */}
           <div className="relative h-[400px] rounded-2xl overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-secondary/10 to-accent/20 animate-glow-pulse" />
-            <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
-            <div className="absolute inset-0 glass-card flex items-center justify-center">
-              <div className="w-64 h-64 rounded-full bg-gradient-to-br from-primary to-secondary opacity-30 blur-3xl animate-float" />
-            </div>
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-background to-secondary/10" />
+            <img
+              src={aiAutomationNodes}
+              alt="AI Automation Network"
+              className="absolute inset-0 w-full h-full object-cover rounded-2xl opacity-90"
+            />
           </div>
         </div>
       </div>
