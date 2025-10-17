@@ -7,6 +7,7 @@ import Platforms from "@/components/Platforms";
 import Results from "@/components/Results";
 import Process from "@/components/Process";
 import CTA from "@/components/CTA";
+import Contact from "@/components/Contact";
 import TermsOfService from "@/components/TermsOfService";
 import PrivacyPolicy from "@/components/PrivacyPolicy";
 import Footer from "@/components/Footer";
@@ -23,6 +24,7 @@ const Index = () => {
       <Results />
       <Process />
       <CTA />
+      <Contact />
       <TermsOfService />
       <PrivacyPolicy />
       <Footer />
