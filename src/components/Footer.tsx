@@ -15,9 +15,6 @@ const Footer = () => {
           
           {/* Links */}
           <div className="flex gap-8">
-            <a href="#about" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              About
-            </a>
             <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
               Services
             </a>
