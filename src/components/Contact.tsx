@@ -137,7 +137,7 @@ const Contact = () => {
                 />
                 <script src="https://brand.pixelcloud9.com/js/form_embed.js"></script>
               </div>
-              <p className="text-xs text-muted-foreground text-center mt-3">
+              <p className="text-xs text-muted-foreground text-center mt-0">
                 By submitting, you agree to our{" "}
                 <a href="#tos" className="hover:text-primary transition-colors">
                   Terms of Service
