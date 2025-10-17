@@ -43,10 +43,15 @@ so you can focus on what you do best.</p>
         animationDelay: '0.4s',
         opacity: 0
       }}>
-          <button className="btn-hero group">
+          <a 
+            href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-hero group"
+          >
             Start with an Audit
             <ArrowRight className="inline-block ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </button>
+          </a>
           <button 
             onClick={() => document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' })}
             className="btn-outline-hero"
