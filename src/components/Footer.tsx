@@ -14,22 +14,22 @@ const Footer = () => {
           </div>
           
           {/* Links */}
-          <div className="flex gap-8">
-            <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Services
+          <div className="flex gap-6">
+            <a href="#tos" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Terms of Service
             </a>
-            <a href="#contact" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-              Contact
+            <a href="#privacy" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+              Privacy Policy
             </a>
           </div>
         </div>
         
-        <div className="mt-8 pt-8 border-t border-border/30 text-center">
+        <div className="mt-8 pt-8 border-t border-border/30 text-center space-y-2">
           <p className="text-xs text-muted-foreground">
-            Powered by PixelCloud9 — Automation for the AI Age
+            © Pixel Cloud9 2025
           </p>
-          <p className="text-xs text-muted-foreground mt-2">
-            © {new Date().getFullYear()} PixelCloud9. All rights reserved.
+          <p className="text-xs text-muted-foreground">
+            Built with ❤️ by Pixel Cloud9.
           </p>
         </div>
       </div>
