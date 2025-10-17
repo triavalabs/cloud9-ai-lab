@@ -26,7 +26,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 px-6 bg-[#F3EFFF] dark:bg-[#1a1625]">
+    <section id="how-it-works" className="py-20 px-6 bg-[#F3EFFF] dark:bg-[#1a1625]">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-4">
