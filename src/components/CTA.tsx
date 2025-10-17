@@ -10,7 +10,7 @@ const CTA = () => {
       />
       
       <div className="container mx-auto max-w-4xl relative z-10">
-        <div className="glass-card p-12 md:p-16 text-center relative overflow-hidden">
+        <div className="glass-card p-12 md:p-16 text-center relative overflow-hidden mb-12">
           {/* Animated glow effect */}
           <div className="absolute inset-0 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10 animate-pulse" />
           
@@ -23,21 +23,21 @@ const CTA = () => {
               Free 30-min strategy call. No pressure — just clear next steps to save 10+ hours a week.
             </p>
             
-            <a 
-              href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="btn-hero group text-base md:text-lg inline-flex items-center justify-center"
-            >
-              <Calendar className="w-5 h-5 mr-2" />
-              Book Your Strategy Call
-            </a>
-            
-            <p className="text-sm text-muted-foreground mt-8">
+            <p className="text-sm text-muted-foreground">
               Free consultation • No commitment required
             </p>
           </div>
         </div>
+
+        {/* Calendar Section */}
+        <section className="calendar-section">
+          <iframe
+            src="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
+            style={{ width: '100%', maxWidth: '900px', height: '900px', border: 'none', borderRadius: '16px' }}
+            loading="lazy"
+            title="Schedule an Appointment"
+          />
+        </section>
       </div>
     </section>
   );
