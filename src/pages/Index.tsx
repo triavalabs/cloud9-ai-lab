@@ -24,9 +24,9 @@ const Index = () => {
       <Results />
       <Process />
       <CTA />
-      <Contact />
       <TermsOfService />
       <PrivacyPolicy />
+      <Contact />
       <Footer />
     </main>
   );
