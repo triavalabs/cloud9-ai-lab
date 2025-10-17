@@ -5,7 +5,7 @@ interface ProblemProps {
 }
 
 const Problem = ({ className = "" }: ProblemProps) => {
-  return <section className={`pb-24 px-6 bg-muted/30 ${className}`}>
+  return <section className={`py-24 px-6 bg-muted/30 ${className}`}>
       <div className="container mx-auto max-w-5xl text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-heading font-bold mb-6">
           You're Growing — But It's Getting <span className="glow-text">Messy</span>
