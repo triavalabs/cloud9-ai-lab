@@ -23,10 +23,15 @@ const CTA = () => {
               Free 30-min strategy call. No pressure — just clear next steps to save 10+ hours a week.
             </p>
             
-            <button className="btn-hero group text-base md:text-lg">
-              <Calendar className="inline-block mr-2 w-5 h-5" />
+            <a 
+              href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="btn-hero group text-base md:text-lg inline-flex items-center justify-center"
+            >
+              <Calendar className="w-5 h-5 mr-2" />
               Book Your Strategy Call
-            </button>
+            </a>
             
             <p className="text-sm text-muted-foreground mt-8">
               Free consultation • No commitment required
