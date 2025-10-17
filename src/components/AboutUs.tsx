@@ -41,11 +41,11 @@ const AboutUs = () => {
             <h2 className="text-4xl md:text-5xl font-heading font-bold">
               About <span className="glow-text">Pixel Cloud9</span>
             </h2>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Pixel Cloud9 is an automation and creative systems studio helping
-              service-based businesses save time and scale through AI, web design,
-              and lead systems. We build digital tools that run your business while
-              you focus on what you do best. Our mission is to make growth effortless
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed tracking-wide font-light">
+              <span className="font-medium text-foreground">Pixel Cloud9</span> is an automation and creative systems studio helping
+              service-based businesses <span className="text-foreground font-medium">save time and scale</span> through AI, web design,
+              and lead systems. We build <span className="text-foreground font-medium">digital tools that run your business</span> while
+              you focus on what you do best. Our mission is to make <span className="glow-text font-semibold">growth effortless</span>{" "}
               through automation, strategy, and authentic design.
             </p>
           </div>
