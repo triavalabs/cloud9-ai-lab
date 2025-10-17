@@ -13,7 +13,7 @@ const Contact = () => {
           Get in Touch
         </h2>
 
-        <div className="bg-white dark:bg-card rounded-2xl pt-4 px-4 pb-0 md:p-6 shadow-lg">
+        <div className="bg-white dark:bg-card rounded-2xl pt-4 px-4 pb-6 md:p-6 shadow-lg">
           <div className="grid md:grid-cols-[320px_1fr] gap-4 md:gap-6">
             {/* Left Column - Business Info (Collapsible on Mobile) */}
             <div className="md:space-y-4">
@@ -117,10 +117,10 @@ const Contact = () => {
 
             {/* Right Column - GoHighLevel Form */}
             <div className="w-full md:max-w-[720px] md:ml-auto">
-              <div className="w-full max-[380px]:w-[105%] max-[380px]:scale-95 max-[380px]:origin-top">
+              <div className="w-full max-[380px]:w-[105%] max-[380px]:scale-95 max-[380px]:origin-top mb-0">
                 <iframe
                   src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2"
-                  style={{ width: '100%', minHeight: '820px', border: 'none', borderRadius: '16px' }}
+                  style={{ width: '100%', minHeight: '820px', border: 'none', borderRadius: '16px', display: 'block', marginBottom: 0 }}
                   id="inline-A6ioJBWfHxNzl56jXrg2" 
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
@@ -137,7 +137,7 @@ const Contact = () => {
                 />
                 <script src="https://brand.pixelcloud9.com/js/form_embed.js"></script>
               </div>
-              <p className="text-xs text-muted-foreground text-center -mt-4">
+              <p className="text-xs text-muted-foreground text-center -mt-2 pt-0">
                 By submitting, you agree to our{" "}
                 <a href="#tos" className="hover:text-primary transition-colors">
                   Terms of Service
