@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
+import HowItWorks from "@/components/HowItWorks";
 import Problem from "@/components/Problem";
 import AboutUs from "@/components/AboutUs";
 import Services from "@/components/Services";
@@ -17,6 +18,7 @@ const Index = () => {
     <main className="min-h-screen">
       <Header />
       <Hero />
+      <HowItWorks />
       <Problem className="py-0" />
       <AboutUs />
       <Services />
