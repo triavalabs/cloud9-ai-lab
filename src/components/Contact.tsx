@@ -13,7 +13,7 @@ const Contact = () => {
           Get in Touch
         </h2>
 
-        <div className="bg-white dark:bg-card rounded-2xl p-4 md:p-6 shadow-lg">
+        <div className="bg-white dark:bg-card rounded-2xl pt-4 px-4 pb-0 md:p-6 shadow-lg">
           <div className="grid md:grid-cols-[320px_1fr] gap-4 md:gap-6">
             {/* Left Column - Business Info (Collapsible on Mobile) */}
             <div className="md:space-y-4">
