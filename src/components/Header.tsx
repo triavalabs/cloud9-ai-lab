@@ -39,22 +39,22 @@ const Header: React.FC = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-3">
             <button
               onClick={() => scrollToSection("about")}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium px-4 py-2 rounded-lg text-foreground/80 hover:text-primary hover:bg-accent/50 transition-all duration-300"
             >
               About
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium px-4 py-2 rounded-lg text-foreground/80 hover:text-primary hover:bg-accent/50 transition-all duration-300"
             >
               Services
             </button>
             <button
               onClick={() => scrollToSection("contact")}
-              className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+              className="text-sm font-medium px-4 py-2 rounded-lg text-foreground/80 hover:text-primary hover:bg-accent/50 transition-all duration-300"
             >
               Contact
             </button>
