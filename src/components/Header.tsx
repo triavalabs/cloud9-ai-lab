@@ -18,8 +18,17 @@ const Header: React.FC = () => {
     <header className="fixed top-0 left-0 right-0 z-50 glass-card border-b border-border/30">
       <div className="container mx-auto max-w-6xl px-6 py-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div className="flex items-center">
+          {/* Mobile Hamburger - Left */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 text-muted-foreground hover:text-primary transition-colors"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+
+          {/* Logo - Left on desktop, Center on mobile */}
+          <div className="absolute left-1/2 -translate-x-1/2 md:relative md:left-auto md:translate-x-0 flex items-center">
             <img 
               src={logo} 
               alt="PixelCloud9 Logo" 
@@ -28,15 +37,6 @@ const Header: React.FC = () => {
               decoding="async" 
             />
           </div>
-
-          {/* Mobile Hamburger - Centered */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden absolute left-1/2 -translate-x-1/2 p-2 text-muted-foreground hover:text-primary transition-colors"
-            aria-label="Toggle menu"
-          >
-            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
