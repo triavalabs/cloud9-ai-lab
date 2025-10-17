@@ -1,26 +1,26 @@
 const Contact = () => {
 
   return (
-    <section id="contact" className="py-12 md:py-20 px-6 bg-[#F3EFFF] dark:bg-[#1a1625]">
+    <section id="contact" className="py-8 md:py-12 px-4 bg-[#F3EFFF] dark:bg-[#1a1625]">
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-center">
+        <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 md:mb-8 text-center">
           Get in Touch
         </h2>
 
-        <div className="rounded-2xl p-8 md:p-12 bg-background/50 backdrop-blur-sm shadow-lg border border-border/50">
-          <div className="grid md:grid-cols-2 gap-12">
+        <div className="rounded-2xl p-4 md:p-6 lg:p-8 bg-background/50 backdrop-blur-sm shadow-lg border border-border/50">
+          <div className="grid md:grid-cols-2 gap-6 md:gap-8">
             {/* Left Column - Business Info */}
-            <div className="space-y-6">
+            <div className="space-y-4">
               <div>
-                <h3 className="text-xl font-heading font-bold mb-2">
+                <h3 className="text-lg md:text-xl font-heading font-bold mb-1">
                   <span className="glow-text">Pixel Cloud9</span>
                 </h3>
-                <p className="text-muted-foreground mb-4">Sole Proprietorship</p>
-                <p className="text-muted-foreground">Jacksonville, FL</p>
+                <p className="text-sm text-muted-foreground mb-2">Sole Proprietorship</p>
+                <p className="text-sm text-muted-foreground">Jacksonville, FL</p>
               </div>
 
-              <div className="space-y-2">
-                <p className="flex items-center gap-2 text-muted-foreground">
+              <div className="space-y-1.5">
+                <p className="flex items-center gap-2 text-sm text-muted-foreground">
                   <span>📧</span>
                   <a
                     href="mailto:mail@pixelcloud9.com"
@@ -29,7 +29,7 @@ const Contact = () => {
                     mail@pixelcloud9.com
                   </a>
                 </p>
-                <p className="flex items-center gap-2 text-muted-foreground">
+                <p className="flex items-center gap-2 text-sm text-muted-foreground">
                   <span>☎️</span>
                   <a
                     href="tel:+17723805151"
@@ -40,21 +40,21 @@ const Contact = () => {
                 </p>
               </div>
 
-              <div className="pt-4">
-                <p className="text-sm text-muted-foreground">
+              <div className="pt-2">
+                <p className="text-xs text-muted-foreground">
                   Legal owner: Robin Converse
                 </p>
               </div>
 
-              <div className="pt-6 border-t border-border/30">
-                <p className="text-sm text-muted-foreground italic">
+              <div className="pt-3 border-t border-border/30">
+                <p className="text-xs md:text-sm text-muted-foreground italic">
                   "Have a project in mind? Let's build something that saves you time and wins you clients."
                 </p>
               </div>
             </div>
 
             {/* Right Column - GoHighLevel Form */}
-            <div className="bg-white dark:bg-card rounded-2xl p-6 md:p-9 shadow-md h-[760px]">
+            <div className="bg-white dark:bg-card rounded-2xl p-3 md:p-4 shadow-md h-[650px] md:h-[680px]">
               <iframe
                 src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2"
                 style={{ width: '100%', height: '100%', border: 'none', borderRadius: '16px' }}
