@@ -1,60 +1,13 @@
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
-import { z } from "zod";
-
-const contactSchema = z.object({
-  name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
-  email: z.string().trim().email("Invalid email address").max(255, "Email must be less than 255 characters"),
-  message: z.string().trim().min(1, "Message is required").max(1000, "Message must be less than 1000 characters"),
-});
-
 const Contact = () => {
-  const { toast } = useToast();
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-  const [errors, setErrors] = useState<Record<string, string>>({});
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    const result = contactSchema.safeParse(formData);
-    
-    if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
-      result.error.errors.forEach((error) => {
-        if (error.path[0]) {
-          fieldErrors[error.path[0].toString()] = error.message;
-        }
-      });
-      setErrors(fieldErrors);
-      return;
-    }
-
-    setErrors({});
-    
-    // Clear form
-    setFormData({ name: "", email: "", message: "" });
-    
-    toast({
-      title: "Success!",
-      description: "Thanks for reaching out! We'll reply within 1 business day.",
-    });
-  };
 
   return (
-    <section id="contact" className="py-24 px-6 border-t border-border/50">
+    <section id="contact" className="py-12 md:py-20 px-6 bg-[#F3EFFF] dark:bg-[#1a1625]">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-heading font-bold mb-12 text-center">
           Get in Touch
         </h2>
 
-        <div className="glass-card rounded-2xl p-8 md:p-12 bg-gradient-to-br from-primary/5 via-secondary/5 to-background shadow-lg">
+        <div className="rounded-2xl p-8 md:p-12 bg-background/50 backdrop-blur-sm shadow-lg border border-border/50">
           <div className="grid md:grid-cols-2 gap-12">
             {/* Left Column - Business Info */}
             <div className="space-y-6">
@@ -100,55 +53,27 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Right Column - Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <Input
-                  type="text"
-                  placeholder="Name *"
-                  value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className={errors.name ? "border-destructive" : ""}
-                />
-                {errors.name && (
-                  <p className="text-sm text-destructive mt-1">{errors.name}</p>
-                )}
-              </div>
-
-              <div>
-                <Input
-                  type="email"
-                  placeholder="Email *"
-                  value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className={errors.email ? "border-destructive" : ""}
-                />
-                {errors.email && (
-                  <p className="text-sm text-destructive mt-1">{errors.email}</p>
-                )}
-              </div>
-
-              <div>
-                <Textarea
-                  placeholder="Message *"
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className={errors.message ? "border-destructive" : ""}
-                  rows={6}
-                />
-                {errors.message && (
-                  <p className="text-sm text-destructive mt-1">{errors.message}</p>
-                )}
-              </div>
-
-              <Button
-                type="submit"
-                className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 transition-opacity"
-                size="lg"
-              >
-                Submit
-              </Button>
-            </form>
+            {/* Right Column - GoHighLevel Form */}
+            <div className="bg-white dark:bg-card rounded-2xl p-6 md:p-9 shadow-md h-[760px]">
+              <iframe
+                src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2"
+                style={{ width: '100%', height: '100%', border: 'none', borderRadius: '16px' }}
+                id="inline-A6ioJBWfHxNzl56jXrg2" 
+                data-layout="{'id':'INLINE'}"
+                data-trigger-type="alwaysShow"
+                data-trigger-value=""
+                data-activation-type="alwaysActivated"
+                data-activation-value=""
+                data-deactivation-type="neverDeactivate"
+                data-deactivation-value=""
+                data-form-name="Contact Form (Website)"
+                data-height="760"
+                data-layout-iframe-id="inline-A6ioJBWfHxNzl56jXrg2"
+                data-form-id="A6ioJBWfHxNzl56jXrg2"
+                title="Contact Form (Website)"
+              />
+              <script src="https://brand.pixelcloud9.com/js/form_embed.js"></script>
+            </div>
           </div>
         </div>
       </div>
