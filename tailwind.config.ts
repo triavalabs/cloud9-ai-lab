@@ -47,6 +47,7 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        "purple-light": "hsl(var(--purple-light))",
       },
       fontFamily: {
         heading: ['Orbitron', 'sans-serif'],

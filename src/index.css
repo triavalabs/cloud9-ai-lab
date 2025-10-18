@@ -40,6 +40,8 @@ All colors MUST be HSL.
     --input: 0 0% 96%;
     --ring: 258 80% 57%;
 
+    --purple-light: 270 100% 96%;
+    
     --radius: 1rem;
     
     /* Custom gradients */
