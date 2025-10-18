@@ -116,12 +116,12 @@ const Contact = () => {
             </div>
 
             {/* Right Column - GoHighLevel Form */}
-            <div className="w-full md:max-w-[720px] md:ml-auto">
+            <div className="w-full md:max-w-[720px] md:ml-auto flex items-center">
               <div className="w-full max-[380px]:w-[105%] max-[380px]:scale-95 max-[380px]:origin-top mb-0">
                 <iframe
                   src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2"
                   style={{ width: '100%', minHeight: '820px', border: 'none', borderRadius: '16px', display: 'block', marginBottom: 0 }}
-                  id="inline-A6ioJBWfHxNzl56jXrg2" 
+                  id="inline-A6ioJBWfHxNzl56jXrg2"
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
                   data-trigger-value=""
