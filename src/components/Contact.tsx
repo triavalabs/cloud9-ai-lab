@@ -7,7 +7,7 @@ import {
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-8 md:py-12 px-4 bg-[#F3EFFF] dark:bg-[#1a1625]">
+    <section id="contact" className="py-8 md:py-12 px-4 bg-purple-light dark:bg-[#1a1625]">
       <div className="container mx-auto max-w-[1040px]">
         <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 md:mb-8 text-center">
           Get in Touch
@@ -117,11 +117,11 @@ const Contact = () => {
 
             {/* Right Column - GoHighLevel Form */}
             <div className="w-full md:max-w-[720px] md:ml-auto flex flex-col items-center gap-4">
-              <div className="w-full max-[380px]:w-[105%] max-[380px]:scale-95 max-[380px]:origin-top" style={{ overflow: 'hidden', maxHeight: '670px', backgroundColor: '#F3EFFF' }}>
-                <div style={{ height: '30px', backgroundColor: '#F3EFFF' }} />
+              <div className="w-full max-[380px]:w-[105%] max-[380px]:scale-95 max-[380px]:origin-top" style={{ overflow: 'hidden', maxHeight: '670px', backgroundColor: 'hsl(255 100% 97%)' }}>
+                <div style={{ height: '30px', backgroundColor: 'hsl(255 100% 97%)' }} />
                 <iframe
                   src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2"
-                  style={{ width: '100%', minHeight: '620px', border: 'none', borderRadius: '16px', display: 'block' }}
+                  style={{ width: '100%', minHeight: '620px', border: 'none', borderRadius: '16px', display: 'block', backgroundColor: 'transparent' }}
                   id="inline-A6ioJBWfHxNzl56jXrg2"
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
@@ -135,6 +135,7 @@ const Contact = () => {
                   data-layout-iframe-id="inline-A6ioJBWfHxNzl56jXrg2"
                   data-form-id="A6ioJBWfHxNzl56jXrg2"
                   title="Contact Form (Website)"
+                  allowTransparency={true}
                 />
                 <script src="https://brand.pixelcloud9.com/js/form_embed.js"></script>
               </div>
