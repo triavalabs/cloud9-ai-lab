@@ -116,12 +116,12 @@ const Contact = () => {
             </div>
 
             {/* Right Column - GoHighLevel Form */}
-            <div className="w-full md:max-w-[720px] md:ml-auto flex items-center">
-              <div className="w-full max-[380px]:w-[105%] max-[380px]:scale-95 max-[380px]:origin-top mb-0">
+            <div className="w-full md:max-w-[720px] md:ml-auto flex flex-col items-center gap-4">
+              <div className="w-full max-[380px]:w-[105%] max-[380px]:scale-95 max-[380px]:origin-top">
                 <iframe
                   src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2"
                   style={{ width: '100%', minHeight: '700px', border: 'none', borderRadius: '16px', display: 'block', marginBottom: 0 }}
-                  id="inline-A6ioJBWfHxNzl56jXrg2"
+                  id="inline-A6ioJBWfHxNzl56jXrg2" 
                   data-layout="{'id':'INLINE'}"
                   data-trigger-type="alwaysShow"
                   data-trigger-value=""
@@ -137,7 +137,7 @@ const Contact = () => {
                 />
                 <script src="https://brand.pixelcloud9.com/js/form_embed.js"></script>
               </div>
-              <p className="text-xs text-muted-foreground text-center -mt-2 pt-0">
+              <p className="text-xs text-muted-foreground text-center">
                 By submitting, you agree to our{" "}
                 <a href="#tos" className="hover:text-primary transition-colors">
                   Terms of Service
