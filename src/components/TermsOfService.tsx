@@ -1,11 +1,11 @@
 const TermsOfService = () => {
   return (
-    <section id="tos" className="py-24 px-6 border-t border-border/50">
+    <section id="tos" className="py-8 px-6 border-t border-border/50">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8">
+        <h2 className="text-lg md:text-xl font-heading font-bold mb-4">
           Terms of Service
         </h2>
-        <div className="space-y-6 text-muted-foreground leading-relaxed">
+        <div className="space-y-2 text-muted-foreground leading-relaxed text-sm opacity-90">
           <p>
             Welcome to Pixel Cloud9. By using our website, services, or products, you agree to comply with and be bound by these Terms of Service. Pixel Cloud9 provides automation, web design, and AI systems to help businesses operate efficiently.
           </p>

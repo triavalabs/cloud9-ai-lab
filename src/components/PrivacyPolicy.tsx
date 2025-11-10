@@ -1,11 +1,11 @@
 const PrivacyPolicy = () => {
   return (
-    <section id="privacy" className="py-24 px-6 border-t border-border/50">
+    <section id="privacy" className="py-8 px-6 border-t border-border/50">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold mb-8">
+        <h2 className="text-lg md:text-xl font-heading font-bold mb-4">
           Privacy Policy
         </h2>
-        <div className="space-y-6 text-muted-foreground leading-relaxed">
+        <div className="space-y-2 text-muted-foreground leading-relaxed text-sm opacity-90">
           <p>
             Pixel Cloud9 respects your privacy. We collect personal information such as name, email, and contact details only to deliver requested services and improve user experience.
           </p>
