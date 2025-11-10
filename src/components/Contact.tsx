@@ -22,7 +22,7 @@ const Contact = () => {
                         <h3 className="text-base font-heading font-bold mb-1">
                           <span className="glow-text">Pixel Cloud9</span>
                         </h3>
-                        <p className="text-xs text-muted-foreground mb-1">Sole Proprietorship</p>
+                        
                         <p className="text-xs text-muted-foreground">Jacksonville, FL</p>
                       </div>
 
@@ -33,12 +33,7 @@ const Contact = () => {
                             mail@pixelcloud9.com
                           </a>
                         </p>
-                        <p className="flex items-center gap-2 text-xs text-muted-foreground">
-                          <span>☎️</span>
-                          <a href="tel:+17723805151" className="text-primary hover:text-primary/80 transition-colors">
-                            (772) 380-5151
-                          </a>
-                        </p>
+                        
                       </div>
 
                       <div className="pt-2">
