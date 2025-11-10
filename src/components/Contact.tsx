@@ -116,7 +116,7 @@ const Contact = () => {
             </div>
 
             {/* Right Column - GoHighLevel Form */}
-            <div className="w-full md:max-w-[720px] md:ml-auto flex flex-col items-center gap-4">
+            <div className="w-full md:max-w-[720px] mx-auto flex flex-col items-center gap-4">
               <div className="w-full" style={{ overflow: 'hidden', maxHeight: '670px', backgroundColor: '#AEE6FF' }}>
                 <iframe
                   src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2"
