@@ -1,13 +1,6 @@
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
-
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const Contact = () => {
-  return (
-    <section id="contact" className="py-8 md:py-12 px-4 bg-purple-light dark:bg-[#1a1625]">
+  return <section id="contact" className="py-8 md:py-12 px-4 bg-purple-light dark:bg-[#1a1625]">
       <div className="container mx-auto max-w-[1040px]">
         <h2 className="text-2xl md:text-3xl font-heading font-bold mb-6 md:mb-8 text-center">
           Get in Touch
@@ -36,19 +29,13 @@ const Contact = () => {
                       <div className="space-y-1.5">
                         <p className="flex items-center gap-2 text-xs text-muted-foreground">
                           <span>📧</span>
-                          <a
-                            href="mailto:mail@pixelcloud9.com"
-                            className="text-primary hover:text-primary/80 transition-colors"
-                          >
+                          <a href="mailto:mail@pixelcloud9.com" className="text-primary hover:text-primary/80 transition-colors">
                             mail@pixelcloud9.com
                           </a>
                         </p>
                         <p className="flex items-center gap-2 text-xs text-muted-foreground">
                           <span>☎️</span>
-                          <a
-                            href="tel:+17723805151"
-                            className="text-primary hover:text-primary/80 transition-colors"
-                          >
+                          <a href="tel:+17723805151" className="text-primary hover:text-primary/80 transition-colors">
                             (772) 380-5151
                           </a>
                         </p>
@@ -83,21 +70,13 @@ const Contact = () => {
                 <div className="space-y-1.5">
                   <p className="flex items-center gap-2 text-sm text-muted-foreground">
                     <span>📧</span>
-                    <a
-                      href="mailto:mail@pixelcloud9.com"
-                      className="text-primary hover:text-primary/80 transition-colors"
-                    >
+                    <a href="mailto:mail@pixelcloud9.com" className="text-primary hover:text-primary/80 transition-colors">
                       mail@pixelcloud9.com
                     </a>
                   </p>
                   <p className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <span>☎️</span>
-                    <a
-                      href="tel:+17723805151"
-                      className="text-primary hover:text-primary/80 transition-colors"
-                    >
-                      (772) 380-5151
-                    </a>
+                    
+                    
                   </p>
                 </div>
 
@@ -117,25 +96,19 @@ const Contact = () => {
 
             {/* Right Column - GoHighLevel Form */}
             <div className="w-full md:max-w-[720px] mx-auto flex flex-col items-center gap-4">
-              <div className="w-full" style={{ overflow: 'hidden', maxHeight: '670px', backgroundColor: '#AEE6FF' }}>
-                <iframe
-                  src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2"
-                  style={{ width: '100%', minHeight: '620px', border: 'none', borderRadius: '16px', display: 'block', backgroundColor: 'transparent' }}
-                  id="inline-A6ioJBWfHxNzl56jXrg2"
-                  data-layout="{'id':'INLINE'}"
-                  data-trigger-type="alwaysShow"
-                  data-trigger-value=""
-                  data-activation-type="alwaysActivated"
-                  data-activation-value=""
-                  data-deactivation-type="neverDeactivate"
-                  data-deactivation-value=""
-                  data-form-name="Contact Form (Website)"
-                  data-height="760"
-                  data-layout-iframe-id="inline-A6ioJBWfHxNzl56jXrg2"
-                  data-form-id="A6ioJBWfHxNzl56jXrg2"
-                  title="Contact Form (Website)"
-                  allowTransparency={true}
-                />
+              <div className="w-full" style={{
+              overflow: 'hidden',
+              maxHeight: '670px',
+              backgroundColor: '#AEE6FF'
+            }}>
+                <iframe src="https://brand.pixelcloud9.com/widget/form/A6ioJBWfHxNzl56jXrg2" style={{
+                width: '100%',
+                minHeight: '620px',
+                border: 'none',
+                borderRadius: '16px',
+                display: 'block',
+                backgroundColor: 'transparent'
+              }} id="inline-A6ioJBWfHxNzl56jXrg2" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-trigger-value="" data-activation-type="alwaysActivated" data-activation-value="" data-deactivation-type="neverDeactivate" data-deactivation-value="" data-form-name="Contact Form (Website)" data-height="760" data-layout-iframe-id="inline-A6ioJBWfHxNzl56jXrg2" data-form-id="A6ioJBWfHxNzl56jXrg2" title="Contact Form (Website)" allowTransparency={true} />
                 <script src="https://brand.pixelcloud9.com/js/form_embed.js"></script>
               </div>
               <p className="text-xs text-muted-foreground text-center">
@@ -153,8 +126,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
