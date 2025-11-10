@@ -9,8 +9,7 @@ import Results from "@/components/Results";
 import Process from "@/components/Process";
 import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
-import TermsOfService from "@/components/TermsOfService";
-import PrivacyPolicy from "@/components/PrivacyPolicy";
+import LegalSection from "@/components/LegalSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -26,8 +25,7 @@ const Index = () => {
       <Results />
       <Process />
       <CTA />
-      <TermsOfService />
-      <PrivacyPolicy />
+      <LegalSection />
       <Contact />
       <Footer />
     </main>
