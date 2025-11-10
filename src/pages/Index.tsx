@@ -25,8 +25,8 @@ const Index = () => {
       <Results />
       <Process />
       <CTA />
-      <LegalSection />
       <Contact />
+      <LegalSection />
       <Footer />
     </main>
   );
