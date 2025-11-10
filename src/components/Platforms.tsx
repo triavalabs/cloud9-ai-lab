@@ -6,6 +6,8 @@ import twilioLogo from "@/assets/logos/twilio.svg";
 import gmailLogo from "@/assets/logos/gmail.png";
 import stripeLogo from "@/assets/logos/stripe.svg";
 import calendlyLogo from "@/assets/logos/calendly.png";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 
 const platforms = [{
   name: "GoHighLevel",
@@ -53,47 +55,41 @@ const Platforms = () => {
           </h2>
         </div>
 
-        <div className="relative overflow-hidden mb-12">
-          <div className="flex gap-8 md:gap-12 animate-scroll-mobile md:animate-scroll hover:pause will-change-transform">
-            {/* First set of logos */}
-            {platforms.map((platform) => (
-              <div 
-                key={platform.name} 
-                className="group relative transition-transform duration-300 hover:scale-110 shrink-0"
-              >
-                {/* Glow effect on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`} />
-                
-                {/* Logo Container */}
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
-                  <img 
-                    src={platform.logo} 
-                    alt={`${platform.name} logo`} 
-                    className={`w-full h-full object-contain ${platform.name === 'OpenAI' ? 'dark:brightness-0 dark:invert' : ''}`} 
-                  />
-                </div>
-              </div>
-            ))}
-            {/* Duplicate set for seamless loop */}
-            {platforms.map((platform) => (
-              <div 
-                key={`${platform.name}-duplicate`} 
-                className="group relative transition-transform duration-300 hover:scale-110 shrink-0"
-              >
-                {/* Glow effect on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`} />
-                
-                {/* Logo Container */}
-                <div className="w-16 h-16 md:w-20 md:h-20 rounded-xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
-                  <img 
-                    src={platform.logo} 
-                    alt={`${platform.name} logo`} 
-                    className={`w-full h-full object-contain ${platform.name === 'OpenAI' ? 'dark:brightness-0 dark:invert' : ''}`} 
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="relative mb-12">
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+              dragFree: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 2000,
+                stopOnInteraction: true,
+              }),
+            ]}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4">
+              {platforms.concat(platforms).map((platform, index) => (
+                <CarouselItem key={`${platform.name}-${index}`} className="pl-4 basis-1/3 md:basis-1/4 lg:basis-1/6">
+                  <div className="group relative transition-transform duration-300 hover:scale-110">
+                    {/* Glow effect on hover */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${platform.color} opacity-0 group-hover:opacity-30 blur-xl transition-opacity duration-300`} />
+                    
+                    {/* Logo Container */}
+                    <div className="w-16 h-16 md:w-20 md:h-20 mx-auto rounded-xl bg-background/50 backdrop-blur-sm border border-border/50 flex items-center justify-center relative z-10 p-3">
+                      <img 
+                        src={platform.logo} 
+                        alt={`${platform.name} logo`} 
+                        className={`w-full h-full object-contain ${platform.name === 'OpenAI' ? 'dark:brightness-0 dark:invert' : ''}`} 
+                      />
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
         </div>
 
         <div className="text-center">
