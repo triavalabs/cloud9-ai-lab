@@ -11,6 +11,7 @@ import CTA from "@/components/CTA";
 import Contact from "@/components/Contact";
 import LegalSection from "@/components/LegalSection";
 import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 const Index = () => {
   return (
@@ -28,6 +29,7 @@ const Index = () => {
       <Contact />
       <LegalSection />
       <Footer />
+      <BackToTop />
     </main>
   );
 };
