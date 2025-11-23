@@ -50,8 +50,8 @@ export default {
         "purple-light": "hsl(var(--purple-light))",
       },
       fontFamily: {
-        heading: ['Orbitron', 'sans-serif'],
-        body: ['Inter', 'sans-serif'],
+        heading: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Display', 'Inter', 'sans-serif'],
+        body: ['-apple-system', 'BlinkMacSystemFont', 'SF Pro Text', 'Inter', 'sans-serif'],
       },
       borderRadius: {
         lg: "var(--radius)",
