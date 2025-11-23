@@ -68,11 +68,15 @@
   }
 
   .apple-button-primary {
-    @apply bg-[hsl(233_64%_45%)] text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-200 hover:bg-[hsl(233_64%_40%)] hover:shadow-lg active:scale-95 inline-flex items-center justify-center gap-2;
+    @apply bg-primary text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-200 hover:shadow-lg active:scale-95 inline-flex items-center justify-center gap-2;
+  }
+  
+  .apple-button-primary:hover {
+    background-color: hsl(233 64% 40%);
   }
 
   .apple-button-secondary {
-    @apply bg-transparent border-2 border-[hsl(233_64%_45%)] text-[hsl(233_64%_45%)] px-8 py-4 rounded-full font-medium text-base transition-all duration-200 hover:bg-[hsl(233_64%_45%)]/5 active:scale-95 inline-flex items-center justify-center gap-2;
+    @apply bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-full font-medium text-base transition-all duration-200 hover:bg-primary/5 active:scale-95 inline-flex items-center justify-center gap-2;
   }
 
   .section-padding {
