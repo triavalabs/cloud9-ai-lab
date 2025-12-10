@@ -9,7 +9,6 @@ const Header = () => {
   const navItems = [
     { label: "Services", path: "/services" },
     { label: "The OS", path: "/pixelcloud9-os" },
-    { label: "Case Studies", path: "/case-studies" },
     { label: "Founder", path: "/founder" }
   ];
 
