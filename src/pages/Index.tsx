@@ -104,7 +104,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Results Snapshot */}
+      {/* Results Snapshot - Hidden until case studies are ready
       <section className="section-padding">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16">Real Systems. <span className="text-primary">Real Results.</span></h2>
@@ -128,6 +128,7 @@ const Index = () => {
           </div>
         </div>
       </section>
+      */}
 
       {/* Founder Story */}
       <section className="section-padding bg-muted/30">
