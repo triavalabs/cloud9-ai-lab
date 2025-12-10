@@ -1,8 +1,11 @@
+import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import WaitlistModal from "@/components/WaitlistModal";
 import { Calendar, Zap, RefreshCw, Building2, Check } from "lucide-react";
 
 const Services = () => {
+  const [waitlistOpen, setWaitlistOpen] = useState(false);
   const services = [
     {
       icon: Calendar,
@@ -139,14 +142,23 @@ const Services = () => {
                   </div>
                 </div>
 
-                <a
-                  href={service.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`w-full mt-6 ${service.comingSoon ? 'apple-button-secondary' : 'apple-button-primary'}`}
-                >
-                  {service.cta}
-                </a>
+                {service.comingSoon ? (
+                  <button
+                    onClick={() => setWaitlistOpen(true)}
+                    className="apple-button-secondary w-full mt-6"
+                  >
+                    {service.cta}
+                  </button>
+                ) : (
+                  <a
+                    href={service.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="apple-button-primary w-full mt-6"
+                  >
+                    {service.cta}
+                  </a>
+                )}
               </div>
             ))}
           </div>
@@ -220,6 +232,8 @@ const Services = () => {
       </section>
 
       <Footer />
+      
+      <WaitlistModal open={waitlistOpen} onOpenChange={setWaitlistOpen} />
     </main>
   );
 };
