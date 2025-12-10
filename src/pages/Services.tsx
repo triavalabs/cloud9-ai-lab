@@ -55,8 +55,8 @@ const Services = () => {
     {
       icon: Building2,
       title: "PixelCloud9 OS™ Licensing",
-      subtitle: "White-Label for Agencies",
-      description: "White-label the OS for your agency or consultancy. Proven system with full implementation guide and revenue share model.",
+      subtitle: "Coming Soon — Q1 2026",
+      description: "White-label the OS for your agency or consultancy. Join the waitlist to be first in line when we launch.",
       features: [
         "White-label OS system",
         "Full implementation guide",
@@ -64,9 +64,10 @@ const Services = () => {
         "Revenue share model"
       ],
       investment: "Revenue Share",
-      timeline: "7-day onboarding",
-      cta: "Partner With Us",
-      link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
+      timeline: "Launching Q1 2026",
+      cta: "Join Waitlist",
+      link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing",
+      comingSoon: true
     }
   ];
 
@@ -96,15 +97,22 @@ const Services = () => {
             {services.map((service, index) => (
               <div
                 key={service.title}
-                className="apple-card p-8 fade-in"
+                className={`apple-card p-8 fade-in relative overflow-hidden ${service.comingSoon ? 'border-dashed border-2 border-primary/30' : ''}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                {/* Coming Soon Badge */}
+                {service.comingSoon && (
+                  <div className="absolute top-4 right-4 bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                    Coming Q1 2026
+                  </div>
+                )}
+
                 <div className="mb-6">
-                  <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4">
-                    <service.icon className="w-7 h-7 text-primary" />
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 ${service.comingSoon ? 'bg-muted' : 'bg-primary/10'}`}>
+                    <service.icon className={`w-7 h-7 ${service.comingSoon ? 'text-muted-foreground' : 'text-primary'}`} />
                   </div>
                   <h2 className="text-3xl font-semibold mb-2">{service.title}</h2>
-                  <p className="text-lg text-primary font-medium">{service.subtitle}</p>
+                  <p className={`text-lg font-medium ${service.comingSoon ? 'text-muted-foreground' : 'text-primary'}`}>{service.subtitle}</p>
                 </div>
 
                 <p className="text-muted-foreground mb-6 leading-relaxed">
@@ -114,7 +122,7 @@ const Services = () => {
                 <div className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <div key={feature} className="flex items-start gap-3">
-                      <Check className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                      <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${service.comingSoon ? 'text-muted-foreground' : 'text-primary'}`} />
                       <span className="text-foreground">{feature}</span>
                     </div>
                   ))}
@@ -135,7 +143,7 @@ const Services = () => {
                   href={service.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="apple-button-primary w-full mt-6"
+                  className={`w-full mt-6 ${service.comingSoon ? 'apple-button-secondary' : 'apple-button-primary'}`}
                 >
                   {service.cta}
                 </a>
