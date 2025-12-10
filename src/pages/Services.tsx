@@ -3,79 +3,51 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WaitlistModal from "@/components/WaitlistModal";
 import { Calendar, Zap, RefreshCw, Building2, Check } from "lucide-react";
-
 const Services = () => {
   const [waitlistOpen, setWaitlistOpen] = useState(false);
-  const services = [
-    {
-      icon: Calendar,
-      title: "AI Systems Audit",
-      subtitle: "Free 30-Minute Strategy Call",
-      description: "We map your automation opportunities, identify bottlenecks, and create a custom blueprint for your business.",
-      features: [
-        "30-minute discovery call",
-        "Custom automation blueprint",
-        "Clear ROI projections",
-        "Zero obligation"
-      ],
-      investment: "Free",
-      timeline: "30 minutes",
-      cta: "Book Your Audit",
-      link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
-    },
-    {
-      icon: Zap,
-      title: "PixelCloud9 OS™ Deploy",
-      subtitle: "10-Day Implementation",
-      description: "Full 3-layer OS implementation that turns your service business into a self-operating machine.",
-      features: [
-        "Custom 3-layer OS configuration",
-        "Full system integration",
-        "Team training included",
-        "30-day ROI guarantee"
-      ],
-      investment: "Custom Quote",
-      timeline: "10 days to deploy, 30 days to ROI",
-      cta: "Start Your Deploy",
-      link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
-    },
-    {
-      icon: RefreshCw,
-      title: "AI Operator Retainer",
-      subtitle: "Ongoing Optimization",
-      description: "Continuous system optimization, monthly upgrades, and performance tracking to keep your business running perfectly.",
-      features: [
-        "Monthly system upgrades",
-        "Ongoing optimization",
-        "Priority support",
-        "Performance dashboards"
-      ],
-      investment: "Monthly Retainer",
-      timeline: "Month-to-month",
-      cta: "Learn More",
-      link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
-    },
-    {
-      icon: Building2,
-      title: "PixelCloud9 OS™ Licensing",
-      subtitle: "Coming Soon — Q1 2026",
-      description: "White-label the OS for your agency or consultancy. Join the waitlist to be first in line when we launch.",
-      features: [
-        "White-label OS system",
-        "Full implementation guide",
-        "Agency training included",
-        "Revenue share model"
-      ],
-      investment: "Revenue Share",
-      timeline: "Launching Q1 2026",
-      cta: "Join Waitlist",
-      link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing",
-      comingSoon: true
-    }
-  ];
-
-  return (
-    <main className="min-h-screen bg-background">
+  const services = [{
+    icon: Calendar,
+    title: "AI Systems Audit",
+    subtitle: "Free 30-Minute Strategy Call",
+    description: "We map your automation opportunities, identify bottlenecks, and create a custom blueprint for your business.",
+    features: ["30-minute discovery call", "Custom automation blueprint", "Clear ROI projections", "Zero obligation"],
+    investment: "Free",
+    timeline: "30 minutes",
+    cta: "Book Your Audit",
+    link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
+  }, {
+    icon: Zap,
+    title: "PixelCloud9 OS™ Deploy",
+    subtitle: "10-Day Implementation",
+    description: "Full 3-layer OS implementation that turns your service business into a self-operating machine.",
+    features: ["Custom 3-layer OS configuration", "Full system integration", "Team training included", "30-day ROI guarantee"],
+    investment: "Custom Quote",
+    timeline: "10 days to deploy, 30 days to ROI",
+    cta: "Start Your Deploy",
+    link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
+  }, {
+    icon: RefreshCw,
+    title: "AI Operator Retainer",
+    subtitle: "Ongoing Optimization",
+    description: "Continuous system optimization, monthly upgrades, and performance tracking to keep your business running perfectly.",
+    features: ["Monthly system upgrades", "Ongoing optimization", "Priority support", "Performance dashboards"],
+    investment: "Monthly Retainer",
+    timeline: "Month-to-month",
+    cta: "Learn More",
+    link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
+  }, {
+    icon: Building2,
+    title: "PixelCloud9 OS™ Licensing",
+    subtitle: "Coming Soon — Q1 2026",
+    description: "White-label the OS for your agency or consultancy. Join the waitlist to be first in line when we launch.",
+    features: ["White-label OS system", "Full implementation guide", "Agency training included", "Revenue share model"],
+    investment: "Revenue Share",
+    timeline: "Launching Q1 2026",
+    cta: "Join Waitlist",
+    link: "https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing",
+    comingSoon: true
+  }];
+  return <main className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -97,18 +69,13 @@ const Services = () => {
       <section className="pb-24 px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="grid md:grid-cols-2 gap-8">
-            {services.map((service, index) => (
-              <div
-                key={service.title}
-                className={`apple-card p-8 fade-in relative overflow-hidden ${service.comingSoon ? 'border-dashed border-2 border-primary/30' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
+            {services.map((service, index) => <div key={service.title} className={`apple-card p-8 fade-in relative overflow-hidden ${service.comingSoon ? 'border-dashed border-2 border-primary/30' : ''}`} style={{
+            animationDelay: `${index * 0.1}s`
+          }}>
                 {/* Coming Soon Badge */}
-                {service.comingSoon && (
-                  <div className="absolute top-4 right-4 bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full">
+                {service.comingSoon && <div className="absolute top-4 right-4 bg-primary text-white text-xs font-semibold px-3 py-1.5 rounded-full">
                     Coming Q1 2026
-                  </div>
-                )}
+                  </div>}
 
                 <div className="mb-6">
                   <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-4 ${service.comingSoon ? 'bg-muted' : 'bg-primary/10'}`}>
@@ -123,12 +90,10 @@ const Services = () => {
                 </p>
 
                 <div className="space-y-3 mb-6">
-                  {service.features.map((feature) => (
-                    <div key={feature} className="flex items-start gap-3">
+                  {service.features.map(feature => <div key={feature} className="flex items-start gap-3">
                       <Check className={`w-5 h-5 mt-0.5 flex-shrink-0 ${service.comingSoon ? 'text-muted-foreground' : 'text-primary'}`} />
                       <span className="text-foreground">{feature}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
 
                 <div className="flex items-center justify-between pt-6 border-t border-border">
@@ -142,25 +107,12 @@ const Services = () => {
                   </div>
                 </div>
 
-                {service.comingSoon ? (
-                  <button
-                    onClick={() => setWaitlistOpen(true)}
-                    className="apple-button-secondary w-full mt-6"
-                  >
+                {service.comingSoon ? <button onClick={() => setWaitlistOpen(true)} className="apple-button-secondary w-full mt-6">
                     {service.cta}
-                  </button>
-                ) : (
-                  <a
-                    href={service.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="apple-button-primary w-full mt-6"
-                  >
+                  </button> : <a href={service.link} target="_blank" rel="noopener noreferrer" className="apple-button-primary w-full mt-6">
                     {service.cta}
-                  </a>
-                )}
-              </div>
-            ))}
+                  </a>}
+              </div>)}
           </div>
         </div>
       </section>
@@ -198,7 +150,8 @@ const Services = () => {
                   <td className="py-4 px-4 text-sm">Continuous optimization</td>
                 </tr>
                 <tr>
-                  <td className="py-4 px-4 text-muted-foreground">Agency/Consultant</td>
+                  <td className="py-4 px-4 text-muted-foreground">Agency/Consultant
+(Coming Soon Q1 2026)</td>
                   <td className="py-4 px-4 font-medium">OS Licensing</td>
                   <td className="py-4 px-4 text-sm">Reselling automation</td>
                 </tr>
@@ -218,12 +171,7 @@ const Services = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Book a free 30-minute AI Systems Audit. No pressure. Just clarity.
             </p>
-            <a
-              href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="apple-button-primary"
-            >
+            <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-primary">
               <Calendar className="w-5 h-5" />
               Get Your Free Audit
             </a>
@@ -234,8 +182,6 @@ const Services = () => {
       <Footer />
       
       <WaitlistModal open={waitlistOpen} onOpenChange={setWaitlistOpen} />
-    </main>
-  );
+    </main>;
 };
-
 export default Services;
