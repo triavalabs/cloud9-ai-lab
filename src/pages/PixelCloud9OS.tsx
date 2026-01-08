@@ -1,6 +1,12 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Download, Zap, TrendingUp, ArrowRight, Database, Brain, LineChart, Shield, Clock, Users } from "lucide-react";
+import { Download, Zap, TrendingUp, ArrowRight, ArrowDown, Database, Brain, LineChart, Shield, Clock, Users } from "lucide-react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const PixelCloud9OS = () => {
   const layers = [
@@ -59,17 +65,17 @@ const PixelCloud9OS = () => {
       <Header />
       
       {/* Hero */}
-      <section className="section-padding pt-32">
+      <section className="section-padding pt-24 md:pt-32">
         <div className="container mx-auto max-w-7xl text-center">
           <div className="fade-in">
-            <h1 className="text-hero mb-6">
-              The Operating System That<br />
+            <h1 className="text-hero mb-4 md:mb-6">
+              The Operating System That<br className="hidden sm:block" />
               <span className="text-primary">Runs Your Business For You</span>
             </h1>
-            <p className="text-subhero max-w-3xl mx-auto mb-12">
+            <p className="text-subhero max-w-3xl mx-auto mb-8 md:mb-12">
               Three intelligent layers that capture every lead, automate every follow-up, and turn your operations into revenue.
             </p>
-            <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-primary">
+            <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-primary w-full sm:w-auto">
               Deploy Your OS in 10 Days
             </a>
           </div>
@@ -79,43 +85,44 @@ const PixelCloud9OS = () => {
       {/* 3-Layer Architecture */}
       <section className="section-padding bg-muted/30">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
               Three Intelligent Layers
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               Built to eliminate chaos and create clarity
             </p>
           </div>
 
-          <div className="space-y-16">
+          {/* Desktop View */}
+          <div className="hidden md:block space-y-12 lg:space-y-16">
             {layers.map((layer, index) => (
               <div
                 key={layer.title}
                 className="fade-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <div className="apple-card p-8 md:p-12">
-                  <div className="flex items-start gap-6 mb-8">
-                    <div className="w-16 h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
-                      <layer.icon className="w-8 h-8 text-primary" />
+                <div className="apple-card p-6 lg:p-12">
+                  <div className="flex items-start gap-4 lg:gap-6 mb-6 lg:mb-8">
+                    <div className="w-12 h-12 lg:w-16 lg:h-16 bg-primary/10 rounded-2xl flex items-center justify-center flex-shrink-0">
+                      <layer.icon className="w-6 h-6 lg:w-8 lg:h-8 text-primary" />
                     </div>
                     <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <h3 className="text-3xl font-semibold">Layer {index + 1}: {layer.title}</h3>
+                      <div className="flex flex-wrap items-center gap-3 mb-2">
+                        <h3 className="text-2xl lg:text-3xl font-semibold">Layer {index + 1}: {layer.title}</h3>
                         <span className="metric-pill">{layer.metric}</span>
                       </div>
-                      <p className="text-lg text-muted-foreground">
+                      <p className="text-base lg:text-lg text-muted-foreground">
                         {layer.description}
                       </p>
                     </div>
                   </div>
 
-                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-4">
                     {layer.modules.map((module) => (
-                      <div key={module.name} className="bg-muted/50 rounded-2xl p-4 border border-border">
-                        <h4 className="font-semibold mb-1">{module.name}</h4>
-                        <p className="text-sm text-muted-foreground">{module.desc}</p>
+                      <div key={module.name} className="bg-muted/50 rounded-2xl p-3 lg:p-4 border border-border">
+                        <h4 className="font-semibold mb-1 text-sm lg:text-base">{module.name}</h4>
+                        <p className="text-xs lg:text-sm text-muted-foreground">{module.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -123,49 +130,85 @@ const PixelCloud9OS = () => {
               </div>
             ))}
           </div>
+
+          {/* Mobile Accordion View */}
+          <div className="md:hidden">
+            <Accordion type="single" collapsible className="space-y-3">
+              {layers.map((layer, index) => (
+                <AccordionItem key={layer.title} value={layer.title} className="apple-card border-0">
+                  <AccordionTrigger className="px-4 py-4 hover:no-underline">
+                    <div className="flex items-center gap-3 text-left">
+                      <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                        <layer.icon className="w-5 h-5 text-primary" />
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold">Layer {index + 1}: {layer.title}</h3>
+                        <div className="metric-pill mt-1">{layer.metric}</div>
+                      </div>
+                    </div>
+                  </AccordionTrigger>
+                  <AccordionContent className="px-4 pb-4">
+                    <p className="text-muted-foreground mb-4 text-sm">
+                      {layer.description}
+                    </p>
+                    <div className="space-y-2">
+                      {layer.modules.map((module) => (
+                        <div key={module.name} className="bg-muted/50 rounded-xl p-3 border border-border">
+                          <h4 className="font-semibold text-sm">{module.name}</h4>
+                          <p className="text-xs text-muted-foreground">{module.desc}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </section>
 
       {/* OS Flow Diagram */}
       <section className="section-padding">
         <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+          <div className="text-center mb-8 md:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
               How It All Works Together
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               From lead to revenue, fully automated
             </p>
           </div>
 
-          <div className="apple-card p-8 md:p-12">
-            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+          <div className="apple-card p-6 md:p-12">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-6 md:gap-8">
               <div className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Download className="w-10 h-10 text-primary" />
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Download className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Lead Arrives</h3>
-                <p className="text-sm text-muted-foreground">Via form, call, or email</p>
+                <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">Lead Arrives</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">Via form, call, or email</p>
               </div>
 
-              <ArrowRight className="w-8 h-8 text-muted-foreground hidden md:block" />
+              <ArrowRight className="w-6 h-6 md:w-8 md:h-8 text-muted-foreground hidden md:block" />
+              <ArrowDown className="w-6 h-6 text-muted-foreground md:hidden" />
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Brain className="w-10 h-10 text-primary" />
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <Brain className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">OS Processes</h3>
-                <p className="text-sm text-muted-foreground">Qualifies, routes, follows up</p>
+                <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">OS Processes</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">Qualifies, routes, follows up</p>
               </div>
 
-              <ArrowRight className="w-8 h-8 text-muted-foreground hidden md:block" />
+              <ArrowRight className="w-6 h-6 md:w-8 md:h-8 text-muted-foreground hidden md:block" />
+              <ArrowDown className="w-6 h-6 text-muted-foreground md:hidden" />
 
               <div className="text-center">
-                <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <TrendingUp className="w-10 h-10 text-primary" />
+                <div className="w-16 h-16 md:w-20 md:h-20 bg-primary/10 rounded-2xl flex items-center justify-center mx-auto mb-3 md:mb-4">
+                  <TrendingUp className="w-8 h-8 md:w-10 md:h-10 text-primary" />
                 </div>
-                <h3 className="text-xl font-semibold mb-2">Revenue Grows</h3>
-                <p className="text-sm text-muted-foreground">Bookings, upsells, retention</p>
+                <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">Revenue Grows</h3>
+                <p className="text-xs md:text-sm text-muted-foreground">Bookings, upsells, retention</p>
               </div>
             </div>
           </div>
@@ -175,25 +218,25 @@ const PixelCloud9OS = () => {
       {/* Benefits Grid */}
       <section className="section-padding bg-muted/30">
         <div className="container mx-auto max-w-7xl">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4">
+          <div className="text-center mb-10 md:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-3 md:mb-4">
               Built For Service Businesses
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-base md:text-xl text-muted-foreground">
               Everything you need to run on autopilot
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
             {benefits.map((benefit, index) => (
               <div
                 key={benefit.title}
-                className="apple-card p-6 fade-in"
+                className="apple-card p-4 md:p-6 fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <benefit.icon className="w-10 h-10 text-primary mb-4" />
-                <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-muted-foreground">{benefit.desc}</p>
+                <benefit.icon className="w-8 h-8 md:w-10 md:h-10 text-primary mb-3 md:mb-4" />
+                <h3 className="text-base md:text-xl font-semibold mb-1 md:mb-2">{benefit.title}</h3>
+                <p className="text-muted-foreground text-xs md:text-base">{benefit.desc}</p>
               </div>
             ))}
           </div>
@@ -203,14 +246,14 @@ const PixelCloud9OS = () => {
       {/* Final CTA */}
       <section className="section-padding">
         <div className="container mx-auto max-w-4xl text-center">
-          <div className="apple-card p-12">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-6">
+          <div className="apple-card p-6 md:p-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-4 md:mb-6">
               Ready to Deploy Your OS?
             </h2>
-            <p className="text-xl text-muted-foreground mb-8">
+            <p className="text-base md:text-xl text-muted-foreground mb-6 md:mb-8">
               10 days to implementation. 30 days to ROI. Zero risk.
             </p>
-            <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-primary">
+            <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-primary w-full sm:w-auto">
               Start Your 10-Day Deploy
             </a>
           </div>
