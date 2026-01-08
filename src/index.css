@@ -68,7 +68,7 @@
   }
 
   .apple-button-primary {
-    @apply bg-primary text-white px-8 py-4 rounded-full font-medium text-base transition-all duration-200 hover:shadow-lg active:scale-95 inline-flex items-center justify-center gap-2;
+    @apply bg-primary text-white px-6 py-3 md:px-8 md:py-4 rounded-full font-medium text-sm md:text-base transition-all duration-200 hover:shadow-lg active:scale-95 inline-flex items-center justify-center gap-2;
   }
   
   .apple-button-primary:hover {
@@ -76,23 +76,23 @@
   }
 
   .apple-button-secondary {
-    @apply bg-transparent border-2 border-primary text-primary px-8 py-4 rounded-full font-medium text-base transition-all duration-200 hover:bg-primary/5 active:scale-95 inline-flex items-center justify-center gap-2;
+    @apply bg-transparent border-2 border-primary text-primary px-6 py-3 md:px-8 md:py-4 rounded-full font-medium text-sm md:text-base transition-all duration-200 hover:bg-primary/5 active:scale-95 inline-flex items-center justify-center gap-2;
   }
 
   .section-padding {
-    @apply py-24 md:py-32 px-6;
+    @apply py-16 md:py-24 lg:py-32 px-4 md:px-6;
   }
 
   .text-hero {
-    @apply text-5xl md:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.1] text-foreground;
+    @apply text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-semibold tracking-tight leading-[1.1] text-foreground;
   }
 
   .text-subhero {
-    @apply text-xl md:text-2xl text-muted-foreground leading-relaxed;
+    @apply text-lg md:text-xl lg:text-2xl text-muted-foreground leading-relaxed;
   }
 
   .metric-pill {
-    @apply inline-flex items-center gap-2 px-4 py-2 bg-muted rounded-full text-sm font-medium text-foreground;
+    @apply inline-flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-muted rounded-full text-xs md:text-sm font-medium text-foreground;
   }
 
   .category-badge {
@@ -101,11 +101,21 @@
 
   /* OS Diagram Styles */
   .os-layer {
-    @apply apple-card p-6 flex flex-col items-center text-center transition-all duration-300 hover:scale-105;
+    @apply apple-card p-4 md:p-6 flex flex-col items-center text-center transition-all duration-300 md:hover:scale-105;
   }
 
   .os-arrow {
     @apply text-muted-foreground text-2xl mx-4 hidden md:block;
+  }
+
+  /* Mobile-optimized buttons */
+  .apple-button-mobile {
+    @apply px-6 py-3 md:px-8 md:py-4 text-sm md:text-base;
+  }
+
+  /* Compact card padding for mobile */
+  .card-mobile {
+    @apply p-4 md:p-6 lg:p-8;
   }
 }
 
