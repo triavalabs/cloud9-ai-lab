@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Mail, Linkedin, Calendar } from "lucide-react";
+import founderPhoto from "@/assets/founder-photo.png";
 
 const Founder = () => {
   return (
@@ -13,14 +14,11 @@ const Founder = () => {
             {/* Photo */}
             <div className="fade-in">
               <div className="apple-card p-2 overflow-hidden">
-                <div className="aspect-[3/4] bg-muted rounded-2xl flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-32 h-32 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-5xl font-semibold text-primary">RC</span>
-                    </div>
-                    <p className="text-muted-foreground">Professional photo coming soon</p>
-                  </div>
-                </div>
+                <img 
+                  src={founderPhoto} 
+                  alt="Robin Converse - Founder of PixelCloud9" 
+                  className="aspect-[3/4] w-full object-cover object-top rounded-2xl"
+                />
               </div>
             </div>
 
