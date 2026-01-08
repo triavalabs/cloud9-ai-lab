@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Calendar, Clock, TrendingUp, DollarSign, ChevronDown, Download, Brain, LineChart, ArrowRight } from "lucide-react";
+import { Calendar, Phone, Globe, MapPin, Workflow, ChevronDown, Download, Brain, LineChart, ArrowRight, PhoneCall } from "lucide-react";
 import makeLogo from "@/assets/logos/make.png";
 import zapierLogo from "@/assets/logos/zapier.svg";
 import openaiLogo from "@/assets/logos/openai.svg";
@@ -8,6 +8,7 @@ import twilioLogo from "@/assets/logos/twilio.svg";
 import calendlyLogo from "@/assets/logos/calendly.png";
 import stripeLogo from "@/assets/logos/stripe.svg";
 import gmailLogo from "@/assets/logos/gmail.png";
+import gohighlevelLogo from "@/assets/logos/gohighlevel.png";
 
 const Index = () => {
   const scrollToSection = (id: string) => {
@@ -24,25 +25,34 @@ const Index = () => {
         <div className="container mx-auto max-w-7xl text-center relative z-10">
           <div className="fade-in">
             <h1 className="text-hero mb-6">
-              Your Business,<br />
-              <span className="text-primary">Running Itself.</span>
+              We Answer Your Calls, Book Your Jobs, and<br />
+              <span className="text-primary">Follow Up Automatically.</span>
             </h1>
             <p className="text-subhero max-w-3xl mx-auto mb-8">
-              The PixelCloud9 Operating System™ turns service businesses into self-operating machines.
+              AI Voice Agents, smart websites, Google Business optimization, and GoHighLevel systems built for local service businesses.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4 mb-12">
-              <div className="metric-pill"><Clock className="w-4 h-4" />10+ hours saved per week</div>
-              <div className="metric-pill"><TrendingUp className="w-4 h-4" />20–40% more bookings</div>
-              <div className="metric-pill"><DollarSign className="w-4 h-4" />ROI in 30 days</div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-primary">
-                Get Your Free AI Audit
+            
+            {/* Voice AI Demo Callout */}
+            <div className="mb-8">
+              <a 
+                href="tel:+18005551234" 
+                className="inline-flex items-center gap-2 px-5 py-3 bg-accent/10 text-accent rounded-full font-medium hover:bg-accent/20 transition-colors"
+              >
+                <PhoneCall className="w-5 h-5" />
+                Hear the AI Answer a Call
               </a>
-              <button onClick={() => scrollToSection('os')} className="apple-button-secondary">
-                See the OS in Action
-              </button>
             </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-4">
+              <a href="tel:+18005551234" className="apple-button-primary">
+                <Phone className="w-5 h-5" />
+                Try the Voice AI Demo
+              </a>
+              <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-secondary">
+                Get a Free Growth Audit
+              </a>
+            </div>
+            <p className="text-sm text-muted-foreground">Live role-play demo. No sales call. No pressure.</p>
           </div>
         </div>
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
@@ -53,9 +63,9 @@ const Index = () => {
       {/* Proof Bar */}
       <section className="py-16 px-6 bg-muted/30">
         <div className="container mx-auto max-w-7xl text-center">
-          <p className="text-sm text-muted-foreground mb-8">Trusted by service businesses. Built on the best tools.</p>
+          <p className="text-sm text-muted-foreground mb-8">Trusted by local service businesses. Powered by industry-leading tools.</p>
           <div className="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-60">
-            {[makeLogo, zapierLogo, openaiLogo, twilioLogo, calendlyLogo, stripeLogo, gmailLogo].map((logo, i) => (
+            {[gohighlevelLogo, twilioLogo, calendlyLogo, openaiLogo, zapierLogo, makeLogo, stripeLogo, gmailLogo].map((logo, i) => (
               <img key={i} src={logo} alt="Integration" className="h-8 grayscale hover:grayscale-0 transition-all" />
             ))}
           </div>
@@ -65,9 +75,16 @@ const Index = () => {
       {/* Problem */}
       <section className="section-padding">
         <div className="container mx-auto max-w-4xl text-center">
-          <h2 className="text-4xl md:text-5xl font-semibold mb-12">Most Service Businesses Are<br /><span className="text-primary">Drowning in Admin Work</span></h2>
+          <h2 className="text-4xl md:text-5xl font-semibold mb-12">You're Losing Money Every Day<br /><span className="text-primary">Your Phone Goes Unanswered</span></h2>
           <div className="grid md:grid-cols-2 gap-6 text-left">
-            {["Missed leads because you didn't reply fast enough", "Manually copying data between systems", "Follow-ups that fall through the cracks", "No visibility into what's actually happening", "Hiring more people to do repetitive tasks", "Losing revenue to poor operations"].map((pain) => (
+            {[
+              "Missed calls when you're busy or after hours",
+              "Leads not getting followed up",
+              "Website traffic that doesn't turn into bookings",
+              "Google Maps visibility dropping",
+              "Too many tools that don't talk to each other",
+              "Spending hours on manual scheduling and reminders"
+            ].map((pain) => (
               <div key={pain} className="flex items-start gap-3 apple-card p-4">
                 <span className="text-primary mt-1">•</span>
                 <span className="text-muted-foreground">{pain}</span>
@@ -77,18 +94,69 @@ const Index = () => {
         </div>
       </section>
 
-      {/* OS Overview */}
-      <section id="os" className="section-padding bg-muted/30">
+      {/* Services Section */}
+      <section id="services" className="section-padding bg-muted/30">
         <div className="container mx-auto max-w-7xl">
           <div className="text-center mb-16 fade-in">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-4">Introducing the <span className="text-primary">PixelCloud9 OS™</span></h2>
-            <p className="text-xl text-muted-foreground">Three intelligent layers that turn your business into a self-operating machine.</p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4">Services That Grow <span className="text-primary">Local Service Businesses</span></h2>
+            <p className="text-xl text-muted-foreground">Everything you need to capture leads, book jobs, and grow revenue.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { 
+                icon: Phone, 
+                title: "AI Voice Agent", 
+                desc: "Answers calls, books appointments, qualifies leads, and escalates when needed. Never miss another opportunity.",
+                cta: "Try the Voice AI Demo",
+                href: "tel:+18005551234"
+              },
+              { 
+                icon: Globe, 
+                title: "Smart Website + Chat", 
+                desc: "High-converting websites with AI chat, booking, and follow-up built in.",
+                cta: "View Website System",
+                href: "/services"
+              },
+              { 
+                icon: MapPin, 
+                title: "Google Business Profile Optimization", 
+                desc: "Rank higher on Google Maps, get more calls, and convert reviews into revenue.",
+                cta: "See GBP Growth Plan",
+                href: "/services"
+              },
+              { 
+                icon: Workflow, 
+                title: "GoHighLevel CRM & Automation", 
+                desc: "Your calls, texts, bookings, reviews, and follow-ups all connected in one system.",
+                cta: "See How the System Works",
+                href: "/services"
+              }
+            ].map((service, i) => (
+              <div key={service.title} className="apple-card p-6 flex flex-col fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
+                <service.icon className="w-10 h-10 text-primary mb-4" />
+                <h3 className="text-xl font-semibold mb-3">{service.title}</h3>
+                <p className="text-muted-foreground text-sm mb-6 flex-grow">{service.desc}</p>
+                <a href={service.href} className="text-primary font-medium text-sm hover:underline inline-flex items-center gap-1">
+                  {service.cta} <ArrowRight className="w-4 h-4" />
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OS Overview */}
+      <section id="os" className="section-padding">
+        <div className="container mx-auto max-w-7xl">
+          <div className="text-center mb-16 fade-in">
+            <h2 className="text-4xl md:text-5xl font-semibold mb-4">The System That Runs Your Business <span className="text-primary">in the Background</span></h2>
+            <p className="text-xl text-muted-foreground">How everything connects to work for you automatically.</p>
           </div>
           <div className="flex flex-col md:flex-row items-start justify-between gap-8">
             {[
-              { icon: Download, title: "Capture", metric: "100% capture rate", desc: "Every lead, inquiry, opportunity—captured instantly" },
-              { icon: Brain, title: "Intelligence", metric: "95% follow-up rate", desc: "Auto-qualification, routing, and follow-ups" },
-              { icon: LineChart, title: "Growth", metric: "30% revenue increase", desc: "Predictive analytics and automated upsells" }
+              { icon: Download, title: "Capture", metric: "Instant capture", desc: "Calls, forms, chat, and Google leads captured instantly." },
+              { icon: Brain, title: "Intelligence", metric: "Auto follow-up", desc: "AI qualifies, routes, and follows up automatically." },
+              { icon: LineChart, title: "Growth", metric: "Revenue increase", desc: "More bookings, better retention, higher revenue." }
             ].map((layer, i) => (
               <div key={layer.title} className="os-layer flex-1 fade-in" style={{ animationDelay: `${i * 0.2}s` }}>
                 <layer.icon className="w-12 h-12 text-primary mb-4" />
@@ -99,39 +167,36 @@ const Index = () => {
             ))}
           </div>
           <div className="text-center mt-12">
-            <a href="/pixelcloud9-os" className="apple-button-primary">Explore the Full OS <ArrowRight className="w-5 h-5" /></a>
+            <a href="/pixelcloud9-os" className="apple-button-secondary">See How It All Connects <ArrowRight className="w-5 h-5" /></a>
           </div>
         </div>
       </section>
 
-      {/* Results Snapshot - Hidden until case studies are ready
-      <section className="section-padding">
-        <div className="container mx-auto max-w-7xl">
-          <h2 className="text-4xl md:text-5xl font-semibold text-center mb-16">Real Systems. <span className="text-primary">Real Results.</span></h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              { title: "The Accountability Engine", category: "Fitness Coaching", metrics: ["70% time saved", "95% follow-up", "30% engagement"] },
-              { title: "Landing Page + CRM", category: "Lead Generation", metrics: ["40% conversion", "24/7 capture", "15min setup"] },
-              { title: "Voice AI Receptionist", category: "Gym Operations", metrics: ["60% booking auto", "24/7 available", "5sec response"] }
-            ].map((study, i) => (
-              <div key={study.title} className="apple-card p-8 fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
-                <span className="category-badge mb-4">{study.category}</span>
-                <h3 className="text-xl font-semibold mb-6">{study.title}</h3>
-                <div className="space-y-2 mb-6">
-                  {study.metrics.map((m) => <div key={m} className="text-sm text-muted-foreground">• {m}</div>)}
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center mt-12">
-            <a href="/case-studies" className="apple-button-secondary">See All Case Studies</a>
+      {/* Voice AI Spotlight */}
+      <section className="section-padding bg-muted/30">
+        <div className="container mx-auto max-w-4xl">
+          <div className="apple-card p-12 text-center">
+            <PhoneCall className="w-16 h-16 text-primary mx-auto mb-6" />
+            <h2 className="text-3xl md:text-4xl font-semibold mb-4">Hear the AI Answer <span className="text-primary">a Real Call</span></h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Try a short role-play demo and experience how the AI handles:
+            </p>
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="metric-pill">Booking appointments</div>
+              <div className="metric-pill">Answering FAQs</div>
+              <div className="metric-pill">Escalating to you when needed</div>
+            </div>
+            <a href="tel:+18005551234" className="apple-button-primary">
+              <Phone className="w-5 h-5" />
+              Call the AI Assistant
+            </a>
+            <p className="text-sm text-muted-foreground mt-6">No commitment. No spam. Just a quick demo.</p>
           </div>
         </div>
       </section>
-      */}
 
       {/* Founder Story */}
-      <section className="section-padding bg-muted/30">
+      <section className="section-padding">
         <div className="container mx-auto max-w-4xl">
           <div className="apple-card p-12 text-center">
             <h2 className="text-3xl font-semibold mb-6">Designed From Chaos. <span className="text-primary">Built For Clarity.</span></h2>
@@ -145,13 +210,13 @@ const Index = () => {
       </section>
 
       {/* Final CTA */}
-      <section className="section-padding">
+      <section className="section-padding bg-muted/30">
         <div className="container mx-auto max-w-4xl text-center">
           <div className="apple-card p-12">
-            <h2 className="text-4xl md:text-5xl font-semibold mb-6">Ready to Run Your Business <span className="text-primary">on Autopilot?</span></h2>
-            <p className="text-xl text-muted-foreground mb-8">Book a free 30-minute AI Systems Audit. No pressure. Just clarity.</p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-6">Ready to Stop Missing Calls and <span className="text-primary">Start Booking Automatically?</span></h2>
+            <p className="text-xl text-muted-foreground mb-8">Book a free 30-minute growth audit. No pressure. Just clarity.</p>
             <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-primary">
-              <Calendar className="w-5 h-5" />Get Your Free Audit
+              <Calendar className="w-5 h-5" />Get Your Free Growth Audit
             </a>
             <p className="text-sm text-muted-foreground mt-6">Free consultation • No commitment required • 30-day ROI guarantee</p>
           </div>
