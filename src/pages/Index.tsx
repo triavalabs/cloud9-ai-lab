@@ -47,7 +47,7 @@ const Index = () => {
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center mb-3">
               <a href="tel:+19045959790" className="apple-button-primary w-full sm:w-auto">
                 <Phone className="w-4 h-4 md:w-5 md:h-5" />
-                Call (904) 595-9790
+                Try Demo AI Voice
               </a>
               <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-secondary w-full sm:w-auto">
                 Get a Free Growth Audit
@@ -108,7 +108,7 @@ const Index = () => {
                 icon: Phone, 
                 title: "AI Voice Agent", 
                 desc: "Answers calls, books appointments, qualifies leads, and escalates when needed.",
-                cta: "Call (904) 595-9790",
+                cta: "Try Demo AI Voice",
                 href: "tel:+19045959790"
               },
               { 
@@ -210,7 +210,7 @@ const Index = () => {
             </div>
             <a href="tel:+19045959790" className="apple-button-primary w-full sm:w-auto">
               <Phone className="w-4 h-4 md:w-5 md:h-5" />
-              Call (904) 595-9790
+              Try Demo AI Voice
             </a>
             <p className="text-xs md:text-sm text-muted-foreground mt-4 md:mt-6">Short demo. No sales call.</p>
           </div>
