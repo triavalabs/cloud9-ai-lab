@@ -45,9 +45,9 @@ const Index = () => {
             </p>
             
             <div className="flex flex-col gap-3 sm:flex-row sm:gap-4 justify-center mb-3">
-              <a href="tel:+18005551234" className="apple-button-primary w-full sm:w-auto">
+              <a href="tel:+19045959790" className="apple-button-primary w-full sm:w-auto">
                 <Phone className="w-4 h-4 md:w-5 md:h-5" />
-                Try the Voice AI Demo
+                Call (904) 595-9790
               </a>
               <a href="https://brand.pixelcloud9.com/widget/bookings/bookwithpixelcloud9marketing" target="_blank" rel="noopener noreferrer" className="apple-button-secondary w-full sm:w-auto">
                 Get a Free Growth Audit
@@ -108,8 +108,8 @@ const Index = () => {
                 icon: Phone, 
                 title: "AI Voice Agent", 
                 desc: "Answers calls, books appointments, qualifies leads, and escalates when needed.",
-                cta: "Try the Voice AI Demo",
-                href: "tel:+18005551234"
+                cta: "Call (904) 595-9790",
+                href: "tel:+19045959790"
               },
               { 
                 icon: Globe, 
@@ -208,9 +208,9 @@ const Index = () => {
               <div className="metric-pill">Answering FAQs</div>
               <div className="metric-pill">Escalating to you</div>
             </div>
-            <a href="tel:+18005551234" className="apple-button-primary w-full sm:w-auto">
+            <a href="tel:+19045959790" className="apple-button-primary w-full sm:w-auto">
               <Phone className="w-4 h-4 md:w-5 md:h-5" />
-              Call the AI Assistant
+              Call (904) 595-9790
             </a>
             <p className="text-xs md:text-sm text-muted-foreground mt-4 md:mt-6">Short demo. No sales call.</p>
           </div>
