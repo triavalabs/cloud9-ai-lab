@@ -12,22 +12,22 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  AI Systems Audit
+                  AI Voice Agent
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  OS Deploy
+                  Smart Website + Chat
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  AI Operator
+                  GBP Optimization
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  Licensing
+                  GoHighLevel CRM
                 </Link>
               </li>
             </ul>
@@ -40,11 +40,6 @@ const Footer = () => {
               <li>
                 <Link to="/pixelcloud9-os" className="text-muted-foreground hover:text-primary transition-colors">
                   The PixelCloud9 OS
-                </Link>
-              </li>
-              <li>
-                <Link to="/case-studies" className="text-muted-foreground hover:text-primary transition-colors">
-                  Case Studies
                 </Link>
               </li>
               <li>
@@ -104,7 +99,8 @@ const Footer = () => {
               © 2025 PixelCloud9 • Built with ❤️ by PixelCloud9
             </span>
           </div>
-          <div className="flex items-center gap-4 text-sm text-muted-foreground">
+          <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-muted-foreground">
+            <span className="text-xs">Built on GoHighLevel, Twilio, Calendly, and proven automation systems.</span>
             <a href="mailto:robin@pixelcloud9.com" className="hover:text-primary transition-colors">
               robin@pixelcloud9.com
             </a>
