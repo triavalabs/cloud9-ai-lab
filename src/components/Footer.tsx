@@ -22,12 +22,17 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  GBP Optimization
+                  Google Business Profile Optimization
                 </Link>
               </li>
               <li>
                 <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
-                  GoHighLevel CRM
+                  GoHighLevel CRM & Automation
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">
+                  AI Systems Audit
                 </Link>
               </li>
             </ul>
